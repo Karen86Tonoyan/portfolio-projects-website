@@ -12,6 +12,7 @@ const links = [
   { to: '/services', label: 'Usługi' },
   { to: '/research', label: 'Research' },
   { to: '/biblioteka', label: 'Biblioteka' },
+  { to: '/badania', label: 'Badania' },
   { to: '/manifests', label: 'Manifesty' },
 ];
 

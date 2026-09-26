@@ -14,6 +14,7 @@ import Research from "./pages/Research";
 import NotFound from "./pages/NotFound";
 import AlfaOffer from "./pages/AlfaOffer";
 import Library from "./pages/Library";
+import NotebookResearch from "./pages/NotebookResearch";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/research" element={<Research />} />
             <Route path="/alfa" element={<AlfaOffer />} />
             <Route path="/biblioteka" element={<Library />} />
+            <Route path="/badania" element={<NotebookResearch />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
