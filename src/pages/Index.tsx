@@ -31,7 +31,7 @@ const Index: React.FC = () => {
           AI Security Architect · Full-Stack Developer · Creator
         </p>
         <p className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed">
-          {user?.bio || 'Twórca ekosystemu ALFA — zaawansowanego systemu bezpieczeństwa AI. Buduję filtry anty-halucynacyjne, silniki deception i systemy monitoringu. 60+ repozytoriów na GitHub.'}
+          {user?.bio || 'Twórca ekosystemu ALFA — zaawansowanego systemu bezpieczeństwa AI. Buduję filtry anty-halucynacyjne, silniki deception i systemy monitoringu. 300+ repozytoriów na GitHub.'}
         </p>
         <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
           Od myślenia do pieniędzy. Od chaosu do kontroli. Od porażek do dominacji.
@@ -45,7 +45,7 @@ const Index: React.FC = () => {
             <span className="flex items-center gap-1"><Building className="h-4 w-4" /> {user.company}</span>
           )}
           <span className="flex items-center gap-1">
-            <Github className="h-4 w-4" /> {user?.public_repos ?? '60+'} repozytoriów
+            <Github className="h-4 w-4" /> {user?.public_repos ?? "300+"} repozytoriów
           </span>
           <span className="flex items-center gap-1">
             <Globe className="h-4 w-4" /> Armenia · Polska
@@ -78,7 +78,7 @@ const Index: React.FC = () => {
       {/* Quick stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
         {[
-          { label: 'Repozytoria', value: user?.public_repos ?? '317', icon: Github },
+          { label: 'Repozytoria', value: user?.public_repos ?? "300+", icon: Github },
           { label: 'Gwiazdki', value: '467', icon: Brain },
           { label: 'Security Score', value: '100%', icon: Shield },
           { label: 'Publikacje', value: '3', icon: BookOpen },

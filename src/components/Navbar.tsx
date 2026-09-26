@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
           <a
-            href="https://github.com/ktono86tonoyan"
+            href="https://github.com/Karen86Tonoyan"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2"
