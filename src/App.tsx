@@ -15,7 +15,6 @@ import NotFound from "./pages/NotFound";
 import AlfaOffer from "./pages/AlfaOffer";
 import Library from "./pages/Library";
 import NotebookResearch from "./pages/NotebookResearch";
-import NotebookResearch from "./pages/NotebookResearch";
 
 const queryClient = new QueryClient();
 
