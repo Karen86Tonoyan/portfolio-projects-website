@@ -2,8 +2,15 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, GraduationCap, Code, Shield, Brain, Globe } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { lovableProjects, LOVABLE_PROJECT_COUNT } from '@/data/lovableProjects';
 
 const experience = [
+  {
+    role: 'AI Product Builder',
+    company: 'Lovable',
+    period: '2025 — Obecnie',
+    description: `${LOVABLE_PROJECT_COUNT} projektów zbudowanych na Lovable: platformy bezpieczeństwa AI (ALFA Secure Scan, AI Safety Filter, Narrative Shield), systemy agentowe (ALFA STUDIOX, Muse Code Assistant, Brain Cloud Agents), interfejsy lokalnych modeli Ollama, prototypy biznesowe (Magenta AI, Venue Harmony) oraz aplikacje edukacyjne i terapeutyczne.`,
+  },
   {
     role: 'AI Security Architect & Founder',
     company: 'ALFA Ecosystem',
@@ -74,6 +81,39 @@ const CV: React.FC = () => (
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Lovable portfolio */}
+      <section className="mb-10">
+        <div className="flex items-center gap-2 mb-1">
+          <Brain className="h-5 w-5 text-primary" />
+          <h2 className="text-xl font-semibold text-foreground">Projekty na Lovable</h2>
+        </div>
+        <p className="text-sm text-muted-foreground mb-4">
+          Łącznie <strong className="text-foreground">{LOVABLE_PROJECT_COUNT}</strong> projektów — poniżej najważniejsze, bez duplikatów.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {lovableProjects.map(p => {
+            const inner = (
+              <Card className="h-full hover:border-primary/30 transition-colors">
+                <CardHeader className="pb-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <CardTitle className="text-sm">{p.name}</CardTitle>
+                    <Badge variant="outline" className="text-[10px] shrink-0">{p.category}</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+                </CardContent>
+              </Card>
+            );
+            return p.url ? (
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer">{inner}</a>
+            ) : (
+              <div key={p.name}>{inner}</div>
+            );
+          })}
         </div>
       </section>
 

@@ -5,11 +5,13 @@ import { Button } from '@/components/ui/button';
 
 const links = [
   { to: '/', label: 'Home' },
+  { to: '/alfa', label: 'Oferta ALFA' },
   { to: '/repositories', label: 'Repozytoria' },
   { to: '/cv', label: 'CV' },
   { to: '/projects', label: 'Projekty' },
   { to: '/services', label: 'Usługi' },
   { to: '/research', label: 'Research' },
+  { to: '/biblioteka', label: 'Biblioteka' },
   { to: '/manifests', label: 'Manifesty' },
 ];
 
