@@ -111,7 +111,7 @@ const CV: React.FC = () => (
         </div>
         <div className="space-y-2">
           {[
-            { label: 'GitHub', url: 'https://github.com/ktono86tonoyan', desc: '60+ repozytoriów' },
+            { label: 'GitHub', url: 'https://github.com/Karen86Tonoyan', desc: '300+ repozytoriów' },
             { label: 'karentonoyan.pl', url: 'https://karentonoyan.pl', desc: 'Strona osobista' },
             { label: 'alfaplatformx.com', url: 'https://alfaplatformx.com', desc: 'ALFA Platform X' },
           ].map(p => (

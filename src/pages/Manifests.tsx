@@ -17,7 +17,7 @@ const manifests = [
   {
     icon: Zap,
     title: 'Manifest Technologiczny',
-    content: `Open-source, przejrzysty kod, dzielenie się wiedzą. 60+ repozytoriów to nie liczba — to filozofia. Każdy projekt jest publiczny, każdy system jest testowalny. NOWA LOGIKA AI: 83/83 testów. Filtry Tonoyana: 7 warstw ochrony. Nie buduję czarnych skrzynek — buduję systemy, które można zweryfikować.`,
+    content: `Open-source, przejrzysty kod, dzielenie się wiedzą. 300+ repozytoriów to nie liczba — to filozofia. Każdy projekt jest publiczny, każdy system jest testowalny. NOWA LOGIKA AI: 83/83 testów. Filtry Tonoyana: 7 warstw ochrony. Nie buduję czarnych skrzynek — buduję systemy, które można zweryfikować.`,
   },
   {
     icon: FileText,
