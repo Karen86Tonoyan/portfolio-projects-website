@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1">
           {links.map(l => (
             <Link
               key={l.to}
@@ -54,14 +54,14 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden p-2 text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden p-2 text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-border bg-background px-4 pb-4">
+        <div className="lg:hidden border-t border-border bg-background px-4 pb-4">
           {links.map(l => (
             <Link
               key={l.to}
