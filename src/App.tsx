@@ -12,6 +12,8 @@ import Manifests from "./pages/Manifests";
 import Services from "./pages/Services";
 import Research from "./pages/Research";
 import NotFound from "./pages/NotFound";
+import AlfaOffer from "./pages/AlfaOffer";
+import Library from "./pages/Library";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/manifests" element={<Manifests />} />
             <Route path="/services" element={<Services />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/alfa" element={<AlfaOffer />} />
+            <Route path="/biblioteka" element={<Library />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
