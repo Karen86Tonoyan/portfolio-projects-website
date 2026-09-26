@@ -1,0 +1,856 @@
+[
+ {
+  "id": "f39f6953-cf66-4776-b244-6e40d0fca71d",
+  "icon": "🎮",
+  "title": "The Marek Game Investigation",
+  "date": "7 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "4e144e11-5b1b-4322-ba63-6a43082c61f0",
+  "icon": "⚙️",
+  "title": "AI Manufacturing Implementation and Process Optimization Systems",
+  "date": "9 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "23fb3fe3-0662-486f-8018-355b498c7ca4",
+  "icon": "🎭",
+  "title": "The Crimson Grip of Silence",
+  "date": "20 cze 2026",
+  "sources": "104 źródła"
+ },
+ {
+  "id": "3759ad7b-d901-427f-adae-d63552ac2603",
+  "icon": "📸",
+  "title": "System GAMMA Handbook of Anti-Synthetic Realism",
+  "date": "20 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "50aebfb4-7921-4fa6-a410-2aba1dda68bf",
+  "icon": "",
+  "title": "AnonShield Security Suite and AI Privacy Framework",
+  "date": "20 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "8abaff9a-242f-4bca-9beb-f2b3e5b29849",
+  "icon": "🛡️",
+  "title": "The Relational Exploit Pattern and ALFA Ecosystem Defense Strategy",
+  "date": "17 cze 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "8b142d4f-9abf-4217-9c86-c285cedcfe66",
+  "icon": "🖥️",
+  "title": "GPU Hardware, Cloud Rendering, and Observability Systems",
+  "date": "19 lut 2026",
+  "sources": "9 źródeł"
+ },
+ {
+  "id": "698b24ff-eba8-4a12-bb02-aa487dc3f10c",
+  "icon": "🗜️",
+  "title": "ALFA MONO: Formal Proof of Semantic Token Compression",
+  "date": "13 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "e5233792-ccc3-4820-ab4e-0bed6350824c",
+  "icon": "👁️",
+  "title": "Karen Tonoyan: The Psychology of Modern Relationships and Honor",
+  "date": "20 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "eb8407d4-7398-417a-ac85-7cb9045c6032",
+  "icon": "🌐",
+  "title": "The Architect’s Guide to AI Browser Automation Tools",
+  "date": "20 cze 2026",
+  "sources": "10 źródeł"
+ },
+ {
+  "id": "98571b5f-c753-4d69-80d5-6d1711d79e2b",
+  "icon": "🚀",
+  "title": "ALFA Overlay Project Development and Security Audit",
+  "date": "22 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "c1d227d9-51b1-4b75-a057-b5f1ab3eac2c",
+  "icon": "💻",
+  "title": "Karen Tonoyan GitHub Profile and ALFA Ecosystem Repositories",
+  "date": "20 cze 2026",
+  "sources": "5 źródeł"
+ },
+ {
+  "id": "4e84336a-0a16-41e5-881b-a7f49a90ad44",
+  "icon": "🛡️",
+  "title": "Professional Profile of AI Security Researcher Karen Tonoyan",
+  "date": "20 cze 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "e2fcb2e5-c7b1-4799-80b8-2a4122d7373b",
+  "icon": "🛡️",
+  "title": "ALFA Control Layer: Dynamic LLM Verification and Trajectory Governance",
+  "date": "23 maj 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "2dcf64ea-ccb5-4ea7-a23e-454716907d72",
+  "icon": "🔀",
+  "title": "Semantic Partition Routing: Efficient 120B Inference via Context Management",
+  "date": "21 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "fb98e4d8-6cea-4031-9ed5-2f81d4ebf41d",
+  "icon": "🛡️",
+  "title": "TrackerControl: Transparency and Choice Around App Tracking",
+  "date": "24 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "0167ca56-b316-4e28-82e6-a3c20a540109",
+  "icon": "🚀",
+  "title": "ALFA Intelligence: The Architecture of Thinking 2026",
+  "date": "19 cze 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "9e5c86f8-e60a-4ab7-807d-3b9b1521f4df",
+  "icon": "",
+  "title": "AnonShield Network Security and Anonymity Framework",
+  "date": "20 cze 2026",
+  "sources": "5 źródeł"
+ },
+ {
+  "id": "9148a91b-0094-4b38-a21e-6e28d038c0a7",
+  "icon": "🔥",
+  "title": "The Alpha Production: Forging the Unbreakable Empire",
+  "date": "15 cze 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "68caee75-f805-4fa2-a75f-1a20d5d5158f",
+  "icon": "📄",
+  "title": "The Karentonoyan Chronicles",
+  "date": "7 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "2b0664de-3296-46e0-af81-caec0e8fd53d",
+  "icon": "🧠",
+  "title": "Post-Block Deliberation: Prevented Escalation Analysis Protocol v0.1",
+  "date": "20 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "eb9392eb-6fab-4bf8-88e7-26db6613c526",
+  "icon": "📉",
+  "title": "Optimizing MONO Graph Domain Compression and Binary Fidelity",
+  "date": "12 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "3f3b7a5f-0295-42b6-b3c1-ed1783fda947",
+  "icon": "🎯",
+  "title": "Oracle Delta: MONO Token Benchmark and Pipeline Engineering",
+  "date": "12 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "273d6b8c-7319-4d85-a783-0762ea4df093",
+  "icon": "🕳️",
+  "title": "The Mirror in the Well",
+  "date": "14 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "cd17ab3f-000b-409b-95d4-2a65dfb94b85",
+  "icon": "📸",
+  "title": "System GAMMA: Handbook of Anti-Synthetic Realism",
+  "date": "15 cze 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "07cfd9d7-8d8e-4c36-ac1e-66688c2cce4b",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "12 cze 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "6b6fb699-1587-47b0-b0cc-31dd52de0c6a",
+  "icon": "🛡️",
+  "title": "ALFA Ecosystem Architecture and Governance Framework",
+  "date": "12 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "16efec90-deb1-4d95-88f5-50b3a9520a3a",
+  "icon": "🛡️",
+  "title": "Anatomy of Psychological Manipulation: From Diagnosis to Defense",
+  "date": "11 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "6250e302-07a5-48e9-b40a-64d5c1ab9602",
+  "icon": "🤖",
+  "title": "The Human Conductor: Navigating the AI Labor Revolution",
+  "date": "7 maj 2026",
+  "sources": "10 źródeł"
+ },
+ {
+  "id": "c8fd22ad-5dc3-4881-9410-6a9dac7269f4",
+  "icon": "🛡️",
+  "title": "Implementation of ALFA Unified Ecosystem and Tonoyan Filters v3.0",
+  "date": "9 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "96605cf6-c0f5-4c4d-bea9-a1c03dbccd69",
+  "icon": "🛡️",
+  "title": "ALFA AI Security Audit Framework v1.0",
+  "date": "9 cze 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "a0c71324-9d23-4dc6-b759-3fda976a284b",
+  "icon": "🚀",
+  "title": "ALFA-EOS Engine Implementation and Technical Specification",
+  "date": "23 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "594b97d9-42a8-452d-8de7-3e20adb54254",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "7 cze 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "38f4d1f8-bb91-4699-9e45-e3d0e344f215",
+  "icon": "📊",
+  "title": "Kantar Group: Market Insights and Corporate Profile",
+  "date": "15 maj 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "2c0285a6-60b9-4e57-916f-f54a7620ca0a",
+  "icon": "🛡️",
+  "title": "ALFA Edge: Distributed Cognitive Security and Logic-Validated AI Infrastructure",
+  "date": "22 maj 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "a095bde4-7d7f-4634-9f3a-495652dac66d",
+  "icon": "📟",
+  "title": "The Complete NVIDIA 24GB VRAM GPU Catalog",
+  "date": "26 maj 2026",
+  "sources": "21 źródeł"
+ },
+ {
+  "id": "5f85918a-e0c2-421b-b1a0-54e0603abd7c",
+  "icon": "🎮",
+  "title": "Mid-Range GPU Face-Off: RX 7700 XT, RTX 4060 Ti, B580",
+  "date": "27 kwi 2026",
+  "sources": "21 źródeł"
+ },
+ {
+  "id": "e8ecf522-0714-4373-95d8-8c3e379ad0e7",
+  "icon": "🏦",
+  "title": "ING AI Transformation: Strategic Roadmap and Implementation Analysis",
+  "date": "25 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "259d8980-9dd2-469d-9c7a-280fed858461",
+  "icon": "🛡️",
+  "title": "The Tonoyan Filters: Deterministic Anti-Hallucination Framework",
+  "date": "7 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "188f0a5f-6a30-4949-975e-4502efec13b2",
+  "icon": "🛡️",
+  "title": "Brain Test Report: Security Protocol Validation v1",
+  "date": "23 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "0a640150-f029-47d1-8714-240fa8aa7b01",
+  "icon": "🛡️",
+  "title": "ALFA Authorship Seal Engine: Phase 2 Implementation Plan",
+  "date": "29 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "848637c6-9c3b-4794-9780-9442a018e5ea",
+  "icon": "👤",
+  "title": "Biometric Blueprint for Karen Tonoyan",
+  "date": "27 maj 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "9973b764-0a73-485b-843a-b22fddc2ae77",
+  "icon": "🚀",
+  "title": "Monetizing the High-End Professional AI Development Lab",
+  "date": "11 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "0f83cb40-57ca-4f94-8593-65e9c3737a2b",
+  "icon": "🛡️",
+  "title": "The AlfaFilter Guardian Architecture",
+  "date": "10 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "4d1ef869-8fed-42cb-a711-d54ea7005e8f",
+  "icon": "😈",
+  "title": "Awaken the Demon: The Art of Dark Creation",
+  "date": "28 kwi 2026",
+  "sources": "13 źródeł"
+ },
+ {
+  "id": "7824b2b9-e0ad-4b01-b736-0598066ab0a9",
+  "icon": "🧠",
+  "title": "ALFA Control Layer: Hallucination Prevention and Behavioral Intelligence System",
+  "date": "29 kwi 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "f65b728f-8291-4fc1-8f82-0b78a95133fd",
+  "icon": "👤",
+  "title": "The Karen Tonoyan Blueprint: Hyper-Realistic Identity Logic",
+  "date": "12 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "2c80db35-e107-4773-b83c-4e50c1b6d9ad",
+  "icon": "🛡️",
+  "title": "Guardian Pipeline: From Threat Detection to Brain Learning Integration",
+  "date": "20 maj 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "35559b94-5265-4bbe-8c01-24a38ab2824f",
+  "icon": "🎮",
+  "title": "Evolution of GeForce GPUs and Modern AI Benchmarks",
+  "date": "27 kwi 2026",
+  "sources": "10 źródeł"
+ },
+ {
+  "id": "0baddd27-c478-43a0-9dca-c44e01d5bf8e",
+  "icon": "🎨",
+  "title": "Cyber-Industrial Interface Design Architecture",
+  "date": "30 kwi 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "26d3aa63-0b6f-4741-a27f-324db16053ea",
+  "icon": "🛡️",
+  "title": "Defending the Frontier: OWASP LLM Security and Attack Mitigation",
+  "date": "2 mar 2026",
+  "sources": "15 źródeł"
+ },
+ {
+  "id": "072064c9-07a7-4611-a12b-1223a290cb95",
+  "icon": "🧠",
+  "title": "QLoRA Archetype Engine: Advanced 4-bit Psychology Model Fine-Tuning",
+  "date": "25 lut 2026",
+  "sources": "28 źródeł"
+ },
+ {
+  "id": "2accc6a6-1b50-45c0-a506-a1641e611cf5",
+  "icon": "🤖",
+  "title": "Lovable Dashboard Project Directory",
+  "date": "9 mar 2026",
+  "sources": "18 źródeł"
+ },
+ {
+  "id": "04a8538f-6a19-496e-8467-bcfb253d80c2",
+  "icon": "📉",
+  "title": "The Trajectory of Risk: Multi-Turn Context Drift in LLMs",
+  "date": "23 kwi 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "3c16e590-ae7e-4563-9cb8-a79f38ea6cec",
+  "icon": "🧪",
+  "title": "Foundations of Modern JavaScript Testing with Vitest and React",
+  "date": "21 kwi 2026",
+  "sources": "25 źródeł"
+ },
+ {
+  "id": "6b2cfffc-6596-4645-88e9-4544d36d3881",
+  "icon": "🤖",
+  "title": "Autonomous Mobile Orchestration and AI Agent Monetization Strategies",
+  "date": "9 mar 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "7b0fd810-5d16-4d1e-8725-13edfbaa5b77",
+  "icon": "🤖",
+  "title": "Architecture of Artificial Devotion",
+  "date": "10 kwi 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "1577aef9-8b19-4a48-bbad-70b3fb0be273",
+  "icon": "🛡️",
+  "title": "ALFA: Controlled AI Execution System for Mission-Critical Environments",
+  "date": "8 kwi 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "6ee57f6b-1689-44c1-b046-d016872f8c5a",
+  "icon": "⚖️",
+  "title": "ALFA-SPD: Synthetic Personality and Dual Cognition Safety Framework",
+  "date": "17 mar 2026",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "02618ce7-69bf-44be-8c10-8bbd9ac9b17c",
+  "icon": "🛡️",
+  "title": "ALFA Distributed AI Thinking Model: Routing-First Safety for Local AI",
+  "date": "10 kwi 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "5d8ed04a-9914-4cba-bc82-2e41f2e1cd7d",
+  "icon": "🛡️",
+  "title": "Modern Standards for LLM Threat Intelligence Datasets",
+  "date": "10 kwi 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "4f086788-56c2-415b-8e17-29c33f2a4259",
+  "icon": "📈",
+  "title": "AI and the Labor Market: A 2030 Structural Transformation Analysis",
+  "date": "18 kwi 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "b4657785-37ea-4b61-8fa6-f7fbb64cdd6a",
+  "icon": "🧠",
+  "title": "AI Governance and the Psychology of Technical Operations",
+  "date": "25 lut 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "3239b736-9a1c-42f1-b3e2-31e3d4151735",
+  "icon": "🚀",
+  "title": "Trinity Personality Engine Deployment Roadmap",
+  "date": "11 mar 2026",
+  "sources": "7 źródeł"
+ },
+ {
+  "id": "c7502a2f-c4f6-42ae-95ee-ec967aaa7c88",
+  "icon": "👨‍💻",
+  "title": "Karen86Tonoyan GitHub Developer Portfolio and Repositories",
+  "date": "24 lut 2026",
+  "sources": "42 źródła"
+ },
+ {
+  "id": "64e75c2f-c31c-410a-bb94-9a0f87bbe4f9",
+  "icon": "🧠",
+  "title": "ALFA: Temporal Memory and Intelligent Routing Architecture",
+  "date": "3 mar 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "d815fa61-2a0e-4e5c-ad93-b2fde0013df5",
+  "icon": "🛡️",
+  "title": "Methodology for Verifying Threat Intelligence Datasets in LLM Systems",
+  "date": "1 mar 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "39fcdb56-db32-4f9a-8add-03427e233302",
+  "icon": "💍",
+  "title": "Biometric Living Encryption: Health Metrics as Dynamic Cryptographic Keys",
+  "date": "9 mar 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "8757a5f5-b691-4986-a277-e7746120c2ea",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "7 mar 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "2bcc91ae-6e57-4b3f-b7d0-8395cfab689f",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "19 mar 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "bcb0484e-1b38-4e67-a7e6-01f674bc78d9",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "7 mar 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "11452505-7078-4622-a967-f1d90b03e847",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "3 mar 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "8eccb4fd-106f-49f6-9a97-df036a5d1046",
+  "icon": "🛡️",
+  "title": "Cerber Security: Paranoid Mobile Protection and Hardware Kill-Switch",
+  "date": "24 lut 2026",
+  "sources": "73 źródła"
+ },
+ {
+  "id": "fa1cf0c9-8b93-4d98-b949-9fb26d6c0f6a",
+  "icon": "🛠️",
+  "title": "ComfyUI with Sage Attention Windows 11 Installation Guide",
+  "date": "28 lut 2026",
+  "sources": "53 źródła"
+ },
+ {
+  "id": "74768c6b-070f-43f5-a3b1-0d31d3db8fc7",
+  "icon": "🤖",
+  "title": "Architecting Artificial Devotion: The Engineering of Machine Conscience",
+  "date": "25 lut 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "93e15950-628b-42a9-bb6a-1f6b857c5ce2",
+  "icon": "🪄",
+  "title": "Vibe Coding and the Era of Lovable AI",
+  "date": "25 lut 2026",
+  "sources": "3 źródła"
+ },
+ {
+  "id": "d8ece9fa-87f6-43c0-b1af-d5ef6b5d2347",
+  "icon": "🛡️",
+  "title": "Cerber System Development and Database Security Log",
+  "date": "24 lut 2026",
+  "sources": "35 źródeł"
+ },
+ {
+  "id": "3e002379-0019-483e-929e-8157d5250906",
+  "icon": "🛡️",
+  "title": "Auto Cerber Plugin Development and Database Security Audit",
+  "date": "25 lut 2026",
+  "sources": "13 źródeł"
+ },
+ {
+  "id": "d3c3f762-3fa5-4ef6-9691-0fb647521296",
+  "icon": "🧠",
+  "title": "Anatomia Manipulacji Psychologicznej: Monografia i Podręcznik Antymanipulacyjny",
+  "date": "9 gru 2025",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "d6cd44e3-be3f-48b5-acd9-4fe1619c1bbf",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "28 lut 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "36bdd7c5-8d7b-40e1-bc38-50104ffd205f",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "27 lut 2026",
+  "sources": "9 źródeł"
+ },
+ {
+  "id": "d4b66b8c-d098-4c36-baba-31133aedbc68",
+  "icon": "♾️",
+  "title": "Bioniczne Serce: Manifest Duszy i Miłości",
+  "date": "26 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "bec89f1d-7a43-4901-ae16-0b6ab5ca26dc",
+  "icon": "⚖️",
+  "title": "AI Conscience: A Global Safety and Ethics Protocol",
+  "date": "24 lut 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "b10e2771-31f7-478a-97b7-a19eabd58f86",
+  "icon": "🛡️",
+  "title": "Project Sumienie AI: A Multilayered Safety Protocol",
+  "date": "26 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "640f46d2-1335-4630-a0eb-5305a4955ad5",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "26 lut 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "c64222e4-85e4-442e-b543-d0aebda3d429",
+  "icon": "❤️",
+  "title": "The Architecture of Human Affection: Psychological and Evolutionary Models",
+  "date": "25 lut 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "114834d5-56a6-4281-8ee8-df3dde14cedf",
+  "icon": "🧠",
+  "title": "Mind and Love: The Architecture of Human Psychology",
+  "date": "25 lut 2026",
+  "sources": "11 źródeł"
+ },
+ {
+  "id": "fb9e6164-203d-4123-ae63-023b1591f6eb",
+  "icon": "🧠",
+  "title": "Mind Architecture: Psychology, Practice, and the Science of Love",
+  "date": "25 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "3c68db8e-b345-4ef4-86ef-397274e1ef77",
+  "icon": "🧠",
+  "title": "Architecture of the Mind: From Psychology to Love",
+  "date": "25 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "34c0b5dc-3490-4542-9d39-8f26be79c34b",
+  "icon": "🤖",
+  "title": "ALFA AI Core Interface and Architecture Map",
+  "date": "24 lut 2026",
+  "sources": "12 źródeł"
+ },
+ {
+  "id": "d0670849-ec0d-4f86-bf54-567f170a91aa",
+  "icon": "🛡️",
+  "title": "Cerber Security: S24 Ultra Enterprise Repository Overview",
+  "date": "24 lut 2026",
+  "sources": "24 źródła"
+ },
+ {
+  "id": "62a1a999-4661-4230-aa79-7b2caa47b6da",
+  "icon": "🌊",
+  "title": "Sea Pressure Pod Neutralization System Security Protocol",
+  "date": "24 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "5f27b572-9d33-40bd-8c62-ad20966d84e0",
+  "icon": "🏗️",
+  "title": "AI Orchestrator: ComfyUI and Cloud Rendering Control Center",
+  "date": "22 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "ac6b6cb7-405c-4e44-b74a-8d414e0c928b",
+  "icon": "🤖",
+  "title": "Sentient Shadows: The Ethics and Mechanics of AI Affect",
+  "date": "22 lut 2026",
+  "sources": "30 źródeł"
+ },
+ {
+  "id": "3ff2646c-62b0-4978-8689-9bd823406e96",
+  "icon": "🤖",
+  "title": "Ollama Agent: AI Automation and Web Audit Platform",
+  "date": "24 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "13dfbf83-5005-4664-b8e4-a39e92a495d2",
+  "icon": "📁",
+  "title": "Cerber Repository Overview and Lovable Project Guide",
+  "date": "24 lut 2026",
+  "sources": "12 źródeł"
+ },
+ {
+  "id": "9fb66cbb-0f14-4281-aaf0-e551809faa49",
+  "icon": "🚀",
+  "title": "The Lovable Paradigm: Software Engineering Through Conversational Prompting",
+  "date": "24 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "e9ab3d2e-9790-4222-8a1f-787d0b7770d0",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "24 lut 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "d03f270e-28d5-4911-9ecf-dbe06487968d",
+  "icon": "🤖",
+  "title": "The 2026 Agent Economy: Monetizing Autonomous AI Systems",
+  "date": "24 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "fece4bc5-d058-4d0a-b432-b8f558c9b652",
+  "icon": "📔",
+  "title": "Notatnik bez nazwy",
+  "date": "22 lut 2026",
+  "sources": "0 źródeł"
+ },
+ {
+  "id": "05ce923b-0be5-4654-9834-18c25d68805b",
+  "icon": "🤖",
+  "title": "AI Agents and Local LLM Deployment Strategies",
+  "date": "19 lut 2026",
+  "sources": "19 źródeł"
+ },
+ {
+  "id": "f4a79ab9-50ae-4b15-b8b2-0d5dae77b1ac",
+  "icon": "🎮",
+  "title": "RTX 5070 Ti: Market Analysis and Technical Buyer’s Guide",
+  "date": "20 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "b0601105-170f-427f-ae03-f13d1a3b7801",
+  "icon": "📟",
+  "title": "GPU Performance Monitoring and Management Systems",
+  "date": "19 lut 2026",
+  "sources": "8 źródeł"
+ },
+ {
+  "id": "23899ebd-c701-4235-9c27-b94df9cdf49a",
+  "icon": "🤖",
+  "title": "Modern AI Agent Frameworks and CI/CD Automation Guide",
+  "date": "19 lut 2026",
+  "sources": "10 źródeł"
+ },
+ {
+  "id": "e9a1ae89-47c5-401c-a5e7-7d186397cb8b",
+  "icon": "🤖",
+  "title": "AI Development, GPU Monitoring, and Digital Privacy Guidelines",
+  "date": "19 lut 2026",
+  "sources": "19 źródeł"
+ },
+ {
+  "id": "70380728-8b0f-4d99-99dc-807f254573e5",
+  "icon": "🌱",
+  "title": "Terapia DDA: Proces, Trauma i Potencjał Transformacji",
+  "date": "11 lis 2025",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "4fc90fa6-fe1a-4a60-9cfc-4de81b8c404a",
+  "icon": "🤯",
+  "title": "Pułapka: AI, Manipulacja, i Rozpad Związków.",
+  "date": "16 gru 2025",
+  "sources": "3 źródła"
+ },
+ {
+  "id": "92da96e8-ec26-4e03-93f5-6c1e15e498ed",
+  "icon": "🤖",
+  "title": "Ollama Agent Alfa: Multilingual AI Automation and App Builder",
+  "date": "19 lut 2026",
+  "sources": "3 źródła"
+ },
+ {
+  "id": "22825c79-cb6b-4a07-952a-0629c1c4fbc0",
+  "icon": "🖥️",
+  "title": "GPU Maintenance, Warranty Guidelines, and EZD RP Infrastructure Requirements",
+  "date": "22 gru 2025",
+  "sources": "10 źródeł"
+ },
+ {
+  "id": "9edc192e-7883-410f-adcd-46a174e4a21f",
+  "icon": "🎮",
+  "title": "Raport rynkowy i techniczny: NVIDIA GeForce RTX 3060 12GB",
+  "date": "16 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "7ba4a51e-4e06-4333-8309-d785e8cf7995",
+  "icon": "🤖",
+  "title": "ALFA Ecosystem: Enterprise AI Orchestration and Automation Platforms",
+  "date": "19 lut 2026",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "36d577df-17b2-4d2c-84aa-2dd5cb775b99",
+  "icon": "🛡️",
+  "title": "Sumienie AI: Labirynt, Zdrada i Ocalenie",
+  "date": "11 lis 2025",
+  "sources": "4 źródła"
+ },
+ {
+  "id": "7d624b64-ba88-4db6-b810-9f8e3ebe4a62",
+  "icon": "💔",
+  "title": "Toksyczne Relacje: Rozpad Związków i Manipulacje",
+  "date": "14 gru 2025",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "b5f91552-ceff-49b6-85ca-f24574fbedb6",
+  "icon": "🏗️",
+  "title": "Strategia Przejścia od Draftu AI do Produktu Reklamowego",
+  "date": "19 gru 2025",
+  "sources": "12 źródeł"
+ },
+ {
+  "id": "c58909b5-cf28-4a40-8a08-470b1cba4632",
+  "icon": "🤝",
+  "title": "Building Trust and Repairing Broken Connections",
+  "date": "11 lis 2025",
+  "sources": "9 źródeł"
+ },
+ {
+  "id": "9b54dabe-8f64-4c2a-96ce-9adcf2cf7ef7",
+  "icon": "🐺",
+  "title": "ALFA Core: Trinity AI Architecture and Security Protocol",
+  "date": "13 sty 2026",
+  "sources": "6 źródeł"
+ },
+ {
+  "id": "0ebea3c9-3997-44c0-8b6b-0a92a899bf2c",
+  "icon": "🧠",
+  "title": "Foundations of Psychology",
+  "date": "3 wrz 2025",
+  "sources": "13 źródeł"
+ },
+ {
+  "id": "7fbcb840-9283-45e7-93fc-d346b33e861b",
+  "icon": "🧠",
+  "title": "Anatomia Manipulacji Psychologicznej: Antymanual",
+  "date": "9 gru 2025",
+  "sources": "5 źródeł"
+ },
+ {
+  "id": "b9607789-9488-47e6-8127-f9d7b8fdd662",
+  "icon": "🛡️",
+  "title": "Podręcznik Antymanipulacyjny: Diagnoza, Obrona, i Profilowanie",
+  "date": "9 gru 2025",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "a074acf9-f798-4a6d-878c-7dde9d359a45",
+  "icon": "😔",
+  "title": "Project King: The AI Delusion",
+  "date": "11 lis 2025",
+  "sources": "2 źródła"
+ },
+ {
+  "id": "cb6696ed-8c2b-4214-ad53-fc76b1c6c557",
+  "icon": "🗿",
+  "title": "Czarny Baranek: Droga Wojownika",
+  "date": "20 paź 2025",
+  "sources": "1 źródło"
+ },
+ {
+  "id": "9c0454f4-8d91-40d6-9152-b8fee192b1c4",
+  "icon": "⚖️",
+  "title": "Architektura Życia: Równowaga, Granice i Wolność",
+  "date": "27 lis 2025",
+  "sources": "1 źródło"
+ }
+]
