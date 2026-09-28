@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 const links = [
   { to: '/', label: 'Home' },
   { to: '/alfa', label: 'Oferta ALFA' },
+  { to: '/alfa-brain', label: 'ALFA Brain' },
   { to: '/repositories', label: 'Repozytoria' },
   { to: '/cv', label: 'CV' },
   { to: '/projects', label: 'Projekty' },
@@ -55,9 +56,9 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="lg:hidden p-2 text-foreground" onClick={() => setOpen(!open)}>
+        <Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? 'Zamknij menu' : 'Otwórz menu'} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        </Button>
       </div>
 
       {/* Mobile menu */}
