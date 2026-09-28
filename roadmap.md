@@ -35,3 +35,4 @@
 - [ ] Zespół 2: zbieranie alertów i dostarczanie do właściciela/stacji; Zespół 3: skan komputera w sieci (porty, wejścia, co działa, kto) — wymaga lokalnego agenta na sprzęcie właściciela
 - [ ] Zespół 4: analiza pracy agentów
 - [ ] Monitor wycieków co godzinę: tylko wskazane domeny i publiczne źródła zagrożeń, bez danych osobowych (wymaga Lovable Cloud + harmonogram + źródło np. Firecrawl)
+- [ ] Datasety Hugging Face — kolejna strona/sekcja po modelach (żądanie użytkownika, 2026-09-28)
