@@ -19,3 +19,7 @@
 - [ ] Scenariusze: dryf, rozbieżne analizy, awaria jednego modelu - reakcja Cerbera i Guardiana
 - [ ] Powiadomienia: nowy HOLD, zatrzymana akcja, rozstrzygnięcie; odbiorcy wg roli
 - [ ] Widok porównania AI-A vs AI-B dla Cerbera: ustalenia, dowody, pewność, różnice
+- [ ] Łasuch połyka każde wejście i zanosi do sandboxu, właściciel dostaje powiadomienie
+- [ ] Szyfrowane kopie zapasowe dziennika + odtwarzanie z weryfikacją integralności
+- [ ] Testy automatyczne: uprawnienia, izolacja sesji, ochrona publicznej bramy (uprawnienia/sesje czekają na logowanie)
+- [ ] Panel kondycji usług: dostępność, opóźnienia, błędy; dane Oracle ukryte bez uprawnień
