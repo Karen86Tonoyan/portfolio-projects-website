@@ -15,3 +15,6 @@
 - [x] Niezmienny dziennik decyzji Oracle i zgłoszeń HOLD (czas, źródło, dowody rozstrzygnięcia)
 - [x] Widok aktywnych blokad HOLD (przyczyna dryfu, wstrzymane akcje, status)
 - [ ] Logowanie i role: pełny wgląd Oracle tylko dla uprawnionych (wymaga Lovable Cloud)
+- [ ] Wejście przez uśpionego bota w sandboxie -> ALFA Bridge w hostingu, wzajemne tokeny, kradzież tokenu zrywa połączenie, punkt łączenia klientów (pokaz)
+- [ ] Scenariusze: dryf, rozbieżne analizy, awaria jednego modelu - reakcja Cerbera i Guardiana
+- [ ] Powiadomienia: nowy HOLD, zatrzymana akcja, rozstrzygnięcie; odbiorcy wg roli
