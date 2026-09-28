@@ -3,6 +3,12 @@ import { ExternalLink, Focus, GitBranch, Maximize2, Minus, Pause, Play, Plus, Ro
 import AlfaBrainGraph, { type AlfaBrainGraphHandle } from '@/components/AlfaBrainGraph';
 import AlfaConnectionStatus from '@/components/AlfaConnectionStatus';
 import GoldenOrbPanel from '@/components/GoldenOrbPanel';
+import AlfaModularSystem from '@/components/AlfaModularSystem';
+import AlfaBridgeFlow from '@/components/AlfaBridgeFlow';
+import AlfaTeams from '@/components/AlfaTeams';
+import SplitTokenPanel from '@/components/SplitTokenPanel';
+import IncidentTimeline from '@/components/IncidentTimeline';
+import ServiceHealthPanel from '@/components/ServiceHealthPanel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -78,6 +84,18 @@ const AlfaBrain: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <AlfaBridgeFlow />
+
+      <AlfaTeams />
+
+      <AlfaModularSystem />
+
+      <SplitTokenPanel />
+
+      <ServiceHealthPanel />
+
+      <IncidentTimeline />
 
       <AlfaConnectionStatus />
 
