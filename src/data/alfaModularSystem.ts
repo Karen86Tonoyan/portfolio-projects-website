@@ -39,14 +39,15 @@ export const pipelineSlots: PipelineSlot[] = [
     options: [{ id: 'oracle', label: 'Oracle', description: 'Odczyt wszystkich modułów, pamięci i audytu. Rekomenduje, niczego nie wykonuje.' }],
   },
   {
-    id: 'analyst', stage: '05', title: 'Oddzielne AI analityczne', swappable: true,
-    options: [
-      { id: 'local', label: 'Model lokalny', description: 'Analiza offline-first, dane nie opuszczają sprzętu.' },
-      { id: 'cloud', label: 'Model zewnętrzny', description: 'Wymienny dostawca, odizolowany od wykonania.' },
-    ],
+    id: 'analyst', stage: '05', title: '2 niezależne AI analityczne', swappable: false,
+    options: [{ id: 'dual', label: 'AI-A + AI-B', description: 'Dwa odizolowane modele analizują ten sam przypadek osobno. Mogą zgłosić HOLD, gdy Oracle dryfuje.' }],
   },
   {
-    id: 'decision', stage: '06', title: 'Wyjście decyzji', swappable: false,
-    options: [{ id: 'decision', label: 'PASS · HOLD · BLOCK', description: 'Cerber wydaje werdykt, całość trafia do śladu audytowego.' }],
+    id: 'cerber', stage: '06', title: 'Cerber decyduje', swappable: false,
+    options: [{ id: 'cerber', label: 'CERBER', description: 'Porównuje obie analizy, decyduje o wykonaniu i odpowiada za decyzję.' }],
+  },
+  {
+    id: 'decision', stage: '07', title: 'Wyjście decyzji', swappable: false,
+    options: [{ id: 'decision', label: 'PASS · HOLD · BLOCK', description: 'Guardian może zatrzymać wykonanie w każdej chwili. Całość trafia do śladu audytowego.' }],
   },
 ];
