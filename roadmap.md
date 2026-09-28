@@ -36,3 +36,4 @@
 - [ ] Zespół 4: analiza pracy agentów
 - [ ] Monitor wycieków co godzinę: tylko wskazane domeny i publiczne źródła zagrożeń, bez danych osobowych (wymaga Lovable Cloud + harmonogram + źródło np. Firecrawl)
 - [ ] Datasety Hugging Face — kolejna strona/sekcja po modelach (żądanie użytkownika, 2026-09-28)
+- [ ] Podłączenie konektorów — użytkownik prosił o „wszystkie”; dopytać, które są potrzebne (n8n? Notion? inne)
