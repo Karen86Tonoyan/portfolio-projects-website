@@ -6,6 +6,10 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 import { pipelineSlots } from '@/data/alfaModularSystem';
 import { appendEntry, verifyChain, type LedgerEntry } from '@/lib/decisionLedger';
+import { cerberScenarios } from '@/data/alfaCerberScenarios';
+import AnalysisComparison from '@/components/AnalysisComparison';
+import HoldNotifications, { defaultNotifyConfig, type AlfaNotification, type NotifyConfig, type NotifyEvent } from '@/components/HoldNotifications';
+import LedgerBackup from '@/components/LedgerBackup';
 
 interface HoldLock {
   id: string;
@@ -19,7 +23,7 @@ interface HoldLock {
 
 const DRIFT_CAUSE = 'Rekomendacja Oracle odbiega od źródeł: twierdzenie bez pokrycia w dokumentach (demo).';
 const HELD_ACTIONS = ['Wykonanie decyzji Cerbera', 'Publikacja wyniku', 'Przekazanie do runtime'];
-const RESOLUTION_EVIDENCE = 'AI-A i AI-B niezależnie potwierdziły zgodność Oracle ze źródłami po ponownym ugruntowaniu (demo).';
+const RESOLUTION_EVIDENCE = 'AI-A i AI-B niezależnie potwierdziły wynik po ponownej analizie źródeł (demo).';
 
 const time = (iso: string) => new Date(iso).toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
@@ -28,29 +32,53 @@ const AlfaModularSystem = () => {
   const [ledger, setLedger] = useState<readonly LedgerEntry[]>([]);
   const [holds, setHolds] = useState<HoldLock[]>([]);
   const [guardianStop, setGuardianStop] = useState(false);
+  const [scenarioId, setScenarioId] = useState(cerberScenarios[0].id);
+  const [notifyConfig, setNotifyConfig] = useState<NotifyConfig>(defaultNotifyConfig);
+  const [notifications, setNotifications] = useState<AlfaNotification[]>([]);
+  const scenario = cerberScenarios.find((c) => c.id === scenarioId) ?? cerberScenarios[0];
+
+  const notify = (event: NotifyEvent, message: string) =>
+    setNotifications((prev) => [...prev, { id: `${Date.now()}-${prev.length}`, event, message, time: time(new Date().toISOString()), recipients: notifyConfig[event] }]);
 
   const activeHolds = holds.filter((h) => h.status === 'active');
-  const drift = activeHolds.length > 0;
-  const blocked = drift || guardianStop;
+  const drift = activeHolds.some((h) => h.cause.startsWith('Dryf'));
+  const anyHold = activeHolds.length > 0;
+  const blocked = anyHold || guardianStop;
   const chainOk = useMemo(() => verifyChain(ledger), [ledger]);
 
   const log = (entry: Parameters<typeof appendEntry>[1]) => setLedger((prev) => appendEntry(prev, entry));
 
-  const simulateDrift = () => {
+  const raiseHold = (cause: string, raisedBy: string) => {
     const id = `HOLD-${(holds.length + 1).toString().padStart(3, '0')}`;
-    setHolds((prev) => [...prev, { id, cause: DRIFT_CAUSE, heldActions: HELD_ACTIONS, raisedBy: 'AI-A, AI-B', raisedAt: new Date().toISOString(), status: 'active' }]);
-    log({ kind: 'ORACLE_DECISION', source: 'Oracle', detail: 'Rekomendacja wydana bez pełnego pokrycia w źródłach.', evidence: 'Porównanie ze źródłami: niezgodność (demo).' });
-    log({ kind: 'HOLD_RAISED', source: 'AI-A, AI-B', detail: `${id}: dryf Oracle — wstrzymano ${HELD_ACTIONS.length} akcje.`, evidence: DRIFT_CAUSE });
+    setHolds((prev) => [...prev, { id, cause, heldActions: HELD_ACTIONS, raisedBy, raisedAt: new Date().toISOString(), status: 'active' }]);
+    log({ kind: 'HOLD_RAISED', source: raisedBy, detail: `${id}: wstrzymano ${HELD_ACTIONS.length} akcje.`, evidence: cause });
+    notify('HOLD_RAISED', `${id}: ${cause}`);
+    notify('ACTION_STOPPED', `${id}: zatrzymano — ${HELD_ACTIONS.join(', ')}`);
   };
+
+  const runScenario = () => {
+    const [a, b] = scenario.analyses;
+    log({ kind: 'ORACLE_DECISION', source: 'Oracle', detail: scenario.oracleDrift ? 'Rekomendacja bez pełnego pokrycia w źródłach.' : 'Rekomendacja zgodna ze źródłami.', evidence: `Scenariusz: ${scenario.label} (demo).` });
+    if (!scenario.holdCause && !blocked) {
+      log({ kind: 'CERBER_VERDICT', source: 'Cerber', detail: scenario.cerberReaction, evidence: `${a.model}: ${a.verdict} ${a.confidence} · ${b.model}: ${b.verdict} ${b.confidence}` });
+      return;
+    }
+    if (scenario.holdCause) raiseHold(scenario.holdCause, scenario.oracleDrift ? 'AI-A, AI-B' : 'Cerber, Guardian');
+    log({ kind: 'CERBER_VERDICT', source: 'Cerber', detail: scenario.holdCause ? scenario.cerberReaction : 'HOLD — aktywne blokady.', evidence: `Guardian: ${scenario.guardianReaction}` });
+  };
+
+  const simulateDrift = () => raiseHold('Dryf Oracle: ' + DRIFT_CAUSE, 'AI-A, AI-B');
 
   const resolve = (id: string) => {
     setHolds((prev) => prev.map((h) => (h.id === id ? { ...h, status: 'resolved', evidence: RESOLUTION_EVIDENCE } : h)));
-    log({ kind: 'HOLD_RESOLVED', source: 'AI-A, AI-B → Cerber', detail: `${id}: dryf rozstrzygnięty, blokada zdjęta.`, evidence: RESOLUTION_EVIDENCE });
+    log({ kind: 'HOLD_RESOLVED', source: 'AI-A, AI-B → Cerber', detail: `${id}: blokada rozstrzygnięta i zdjęta.`, evidence: RESOLUTION_EVIDENCE });
+    notify('HOLD_RESOLVED', `${id}: rozstrzygnięto. ${RESOLUTION_EVIDENCE}`);
   };
 
   const toggleGuardian = () => {
     const next = !guardianStop;
     setGuardianStop(next);
+    if (next) notify('ACTION_STOPPED', 'Guardian zatrzymał wykonanie.');
     log(next
       ? { kind: 'GUARDIAN_STOP', source: 'Guardian', detail: 'Guardian zatrzymał wykonanie.', evidence: 'Weto Guardiana (demo).' }
       : { kind: 'GUARDIAN_RELEASE', source: 'Guardian', detail: 'Guardian zwolnił zatrzymanie.', evidence: 'Ręczne zwolnienie (demo).' });
@@ -83,7 +111,11 @@ const AlfaModularSystem = () => {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          <Button onClick={runDecision}><Play />Uruchom decyzję</Button>
+          <select value={scenarioId} onChange={(e) => setScenarioId(e.target.value as typeof scenarioId)} aria-label="Scenariusz reakcji Cerbera i Guardiana" className="h-10 border border-input bg-background px-3 text-sm">
+            {cerberScenarios.map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
+          </select>
+          <Button onClick={runScenario}><Play />Uruchom scenariusz</Button>
+          <Button variant="outline" onClick={runDecision}><ShieldCheck />Uruchom decyzję</Button>
           <Button variant="outline" onClick={simulateDrift}><AlertTriangle />Symuluj dryf Oracle</Button>
           <Button variant="outline" onClick={toggleGuardian}>{guardianStop ? <Unlock /> : <Hand />}{guardianStop ? 'Guardian: zwolnij' : 'Guardian: zatrzymaj'}</Button>
           <p role="status" className={cn('text-sm', blocked ? 'text-destructive' : 'text-muted-foreground')}>
@@ -121,6 +153,11 @@ const AlfaModularSystem = () => {
             );
           })}
         </ol>
+
+        <div className="mt-5 grid gap-5 lg:grid-cols-2">
+          <AnalysisComparison scenario={scenario} />
+          <HoldNotifications config={notifyConfig} onChange={setNotifyConfig} items={notifications} />
+        </div>
 
         <div className="mt-5 grid gap-5 lg:grid-cols-2">
           <div className="border border-border bg-card p-4">
@@ -165,6 +202,7 @@ const AlfaModularSystem = () => {
             </ScrollArea>
           </div>
         </div>
+        <LedgerBackup ledger={ledger} onRestore={setLedger} />
         <p className="mt-3 font-mono text-[10px] uppercase text-muted-foreground">Prezentacja architektury · lokalna symulacja · bez skanowania i bez akcji zewnętrznych</p>
       </div>
     </section>
