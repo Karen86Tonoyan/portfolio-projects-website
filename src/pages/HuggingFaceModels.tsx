@@ -71,8 +71,8 @@ const HuggingFaceModels: React.FC = () => {
     };
   }, [debounced, task, sort, retryNonce]);
 
-  const taskLabel = useMemo(
-    () => new Map(HF_TASK_OPTIONS.map(o => [o.value, o.label])),
+  const taskLabel = useMemo<Map<string, string>>(
+    () => new Map<string, string>(HF_TASK_OPTIONS.map(o => [o.value, o.label])),
     [],
   );
 
