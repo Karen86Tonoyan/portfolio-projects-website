@@ -144,13 +144,21 @@ const GoldenOrbPanel = () => {
             <div className="flex flex-col gap-3 sm:flex-row">
               <Select value={scenarioId} onValueChange={(value) => { setScenarioId(value); setActiveIndex(-1); }} disabled={running}>
                 <SelectTrigger aria-label="Wybierz scenariusz symulacji" className="flex-1"><SelectValue /></SelectTrigger>
-                <SelectContent>{simulationScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectContent>
+                <SelectContent>
+                  <SelectGroup><SelectLabel>Wbudowane</SelectLabel>{simulationScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectGroup>
+                  {customScenarios.length > 0 && <SelectGroup><SelectLabel>Własne</SelectLabel>{customScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectGroup>}
+                </SelectContent>
               </Select>
               <Button onClick={runSimulation} disabled={running}><Play />{running ? 'Symulacja trwa…' : 'Uruchom symulację'}</Button>
             </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Button variant="outline" size="sm" onClick={openNew} disabled={running}><Plus />Nowy scenariusz</Button>
+              <Button variant="outline" size="sm" onClick={openEdit} disabled={running || !isCustom}><Pencil />Edytuj</Button>
+              <Button variant="outline" size="sm" onClick={handleDelete} disabled={running || !isCustom}><Trash2 />Usuń</Button>
+            </div>
 
             <div className="mt-5 border-l-2 border-primary/30 pl-4">
-              <p className="font-mono text-[10px] uppercase text-muted-foreground">Przykładowe żądanie</p>
+              <p className="font-mono text-[10px] uppercase text-muted-foreground">{isCustom ? 'Własne żądanie' : 'Przykładowe żądanie'}</p>
               <p className="mt-2 text-sm leading-relaxed">{scenario.request}</p>
             </div>
 
