@@ -192,6 +192,8 @@
   .alfa-status-dot.status-active { fill: hsl(var(--alfa-safe)); }
   .alfa-status-dot.status-protected { fill: hsl(var(--primary)); }
   .alfa-status-dot.status-observed { fill: hsl(var(--alfa-watch)); }
+  .alfa-legend-safe { background: hsl(var(--alfa-safe)); }
+  .alfa-legend-watch { background: hsl(var(--alfa-watch)); }
 }
 
 @layer utilities {

@@ -44,6 +44,11 @@ export const alfaBrainNodes: AlfaBrainNode[] = [
   { id: 'cloud', label: 'CLOUD SECURITY', type: 'domain', status: 'observed', description: 'Reprezentatywna domena ochrony środowisk chmurowych i mapowań NIST.', source: 'index.json', skills: 66 },
   { id: 'forensics', label: 'FORENSICS', type: 'domain', status: 'observed', description: 'Analiza śladów, obrazów dysków, logów i zdarzeń bezpieczeństwa.', source: 'skills/', skills: 54 },
   { id: 'ai-safety', label: 'AI SECURITY', type: 'domain', status: 'active', description: 'Bezpieczeństwo agentów, modeli LLM, pamięci oraz decyzji narzędziowych.', source: 'skills/' },
+  { id: 'filters', label: 'ALFA FILTERS', type: 'gate', status: 'active', description: 'Warstwowe filtry wejścia, kontekstu, polityk, pamięci, wykonania, weryfikacji i audytu.', source: 'docs/alfa_execution_security_protocol.md' },
+  { id: 'chats', label: 'CHAT CHANNELS', type: 'engine', status: 'observed', description: 'Punkt wejścia rozmów i kanałów komunikacji kierowanych przez bezpieczne bramki ALFA.', source: 'docs/ALFA_AGENT_DASHBOARD.md' },
+  { id: 'mono-agent', label: 'MONO AGENT', type: 'engine', status: 'protected', description: 'Pojedynczy agent wykonawczy pracujący w ograniczonym zakresie narzędzi i polityk.', source: 'docs/ALFA_AGENT_RUNTIME.md' },
+  { id: 'oracle', label: 'ORACLE', type: 'engine', status: 'observed', description: 'Warstwa interpretacji wiedzy i rekomendacji, której wynik przechodzi przez Cerbera.', source: 'docs/ALFA_KNOWLEDGE_GRAPH.md' },
+  { id: 'n8n', label: 'N8N WORKFLOWS', type: 'engine', status: 'protected', description: 'Zewnętrzna warstwa automatyzacji workflow podłączana przez kontrolowany interfejs i bramki wykonania.', source: 'integration-schema' },
 ];
 
 export const alfaBrainLinks: AlfaBrainLink[] = [
@@ -69,6 +74,14 @@ export const alfaBrainLinks: AlfaBrainLink[] = [
   { source: 'cloud', target: 'policy', relation: 'maps_to' },
   { source: 'forensics', target: 'guardian', relation: 'supports' },
   { source: 'ai-safety', target: 'cerber', relation: 'strengthens' },
+  { source: 'chats', target: 'filters', relation: 'passes_through' },
+  { source: 'filters', target: 'brain', relation: 'sanitizes_for' },
+  { source: 'brain', target: 'mono-agent', relation: 'coordinates' },
+  { source: 'knowledge', target: 'oracle', relation: 'grounds' },
+  { source: 'oracle', target: 'cerber', relation: 'requests_verdict' },
+  { source: 'mono-agent', target: 'runtime', relation: 'executes_in' },
+  { source: 'runtime', target: 'n8n', relation: 'dispatches' },
+  { source: 'n8n', target: 'verify', relation: 'returns_to' },
 ];
 
 export const alfaRepositoryUrl = 'https://github.com/Karen86Tonoyan/Anthropic-and-Alfa-Security-Skill-whyd-graff-and-Alfa-brain';

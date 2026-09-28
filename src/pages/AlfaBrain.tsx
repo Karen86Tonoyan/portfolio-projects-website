@@ -153,8 +153,8 @@ const AlfaBrain: React.FC = () => {
               <h2 className="font-mono text-xs uppercase text-muted-foreground">Legenda</h2>
               <div className="mt-3 grid grid-cols-2 gap-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-2"><i className="h-2.5 w-2.5 rounded-full bg-primary" /> Chroniony</span>
-                <span className="flex items-center gap-2"><i className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--alfa-safe))]" /> Aktywny</span>
-                <span className="flex items-center gap-2"><i className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--alfa-watch))]" /> Monitorowany</span>
+                <span className="flex items-center gap-2"><i className="alfa-legend-safe h-2.5 w-2.5 rounded-full" /> Aktywny</span>
+                <span className="flex items-center gap-2"><i className="alfa-legend-watch h-2.5 w-2.5 rounded-full" /> Monitorowany</span>
                 <span className="flex items-center gap-2"><Maximize2 className="h-3 w-3" /> D3 force graph</span>
               </div>
             </section>
