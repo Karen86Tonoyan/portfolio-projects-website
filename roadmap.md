@@ -33,3 +33,5 @@
 - [x] Alerty eskalacyjne (odmowy, HOLD, zmiany tokenów) z historią potwierdzeń operatora
 - [ ] Menedżer kluczy: rotacja kluczy kopii i rejestr dostępu (czeka na: Lovable Cloud / wybór menedżera)
 - [ ] Zespół 2: zbieranie alertów i dostarczanie do właściciela/stacji; Zespół 3: skan komputera w sieci (porty, wejścia, co działa, kto) — wymaga lokalnego agenta na sprzęcie właściciela
+- [ ] Zespół 4: analiza pracy agentów
+- [ ] Monitor wycieków co godzinę: tylko wskazane domeny i publiczne źródła zagrożeń, bez danych osobowych (wymaga Lovable Cloud + harmonogram + źródło np. Firecrawl)
