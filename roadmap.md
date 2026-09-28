@@ -10,4 +10,4 @@
 - [x] Dodać w Golden Orb Panel lokalną symulację z przykładowymi danymi i wynikami każdego węzła, bez zewnętrznych akcji.
 - [x] System monitoringu bezpieczeństwa: wymienne moduły/algorytmy/silniki + osobne AI do analizy (publiczna prezentacja)
 - [x] Oracle: zakres dostępu „do wszystkiego” (odczyt wszystkich modułów)
-- [ ] Protokół HOLD: AI pod Oracle blokują decyzję przy dryfie Oracle do rozstrzygnięcia
+- [x] Protokół HOLD: AI pod Oracle blokują decyzję przy dryfie Oracle do rozstrzygnięcia
