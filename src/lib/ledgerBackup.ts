@@ -7,9 +7,9 @@ export const MIN_PASSPHRASE = 12;
 interface BackupFile { v: 1; alg: 'AES-GCM'; kdf: 'PBKDF2-SHA256'; iter: number; salt: string; iv: string; data: string }
 
 const b64 = (buf: ArrayBuffer | Uint8Array) => btoa(String.fromCharCode(...new Uint8Array(buf)));
-const unb64 = (s: string) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+const unb64 = (s: string) => { const raw = atob(s); const out = new Uint8Array(new ArrayBuffer(raw.length)); for (let i = 0; i < raw.length; i += 1) out[i] = raw.charCodeAt(i); return out; };
 
-const deriveKey = async (passphrase: string, salt: Uint8Array, iter: number) => {
+const deriveKey = async (passphrase: string, salt: Uint8Array<ArrayBuffer>, iter: number) => {
   const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(passphrase), 'PBKDF2', false, ['deriveKey']);
   return crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: iter, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
 };
@@ -17,8 +17,8 @@ const deriveKey = async (passphrase: string, salt: Uint8Array, iter: number) => 
 export const encryptLedger = async (ledger: readonly LedgerEntry[], passphrase: string): Promise<string> => {
   if (passphrase.length < MIN_PASSPHRASE) throw new Error(`Hasło musi mieć co najmniej ${MIN_PASSPHRASE} znaków.`);
   if (!verifyChain(ledger)) throw new Error('Dziennik ma naruszony łańcuch — kopia odrzucona.');
-  const salt = crypto.getRandomValues(new Uint8Array(16));
-  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const salt = crypto.getRandomValues(new Uint8Array(new ArrayBuffer(16)));
+  const iv = crypto.getRandomValues(new Uint8Array(new ArrayBuffer(12)));
   const key = await deriveKey(passphrase, salt, ITERATIONS);
   const data = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(JSON.stringify(ledger)));
   const file: BackupFile = { v: 1, alg: 'AES-GCM', kdf: 'PBKDF2-SHA256', iter: ITERATIONS, salt: b64(salt), iv: b64(iv), data: b64(data) };

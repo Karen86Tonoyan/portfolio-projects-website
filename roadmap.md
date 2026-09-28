@@ -23,3 +23,7 @@
 - [ ] Szyfrowane kopie zapasowe dziennika + odtwarzanie z weryfikacją integralności
 - [ ] Testy automatyczne: uprawnienia, izolacja sesji, ochrona publicznej bramy (uprawnienia/sesje czekają na logowanie)
 - [ ] Panel kondycji usług: dostępność, opóźnienia, błędy; dane Oracle ukryte bez uprawnień
+- [ ] Dzielony token: Oracle trzyma połowę tokenu klienta, klient podaje 2 hasła + swoją połowę, Cerber sprawdza parę i mówi PASS/DENY, nikt nie widzi drugiej połowy, Oracle nie ujawnia klienta
+- [ ] Rotacja, wygasanie i natychmiastowe unieważnianie sparowanych tokenów z audytem
+- [ ] Limity i rosnące opóźnienia po nieudanych próbach, konfigurowalne progi, rejestr zdarzeń
+- [ ] Oś czasu incydentu: brama, Cerber, Guardian, HOLD, operatorzy
