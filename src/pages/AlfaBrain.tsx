@@ -4,6 +4,8 @@ import AlfaBrainGraph, { type AlfaBrainGraphHandle } from '@/components/AlfaBrai
 import AlfaConnectionStatus from '@/components/AlfaConnectionStatus';
 import GoldenOrbPanel from '@/components/GoldenOrbPanel';
 import AlfaModularSystem from '@/components/AlfaModularSystem';
+import AlfaBridgeFlow from '@/components/AlfaBridgeFlow';
+import ServiceHealthPanel from '@/components/ServiceHealthPanel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -80,7 +82,11 @@ const AlfaBrain: React.FC = () => {
         </div>
       </div>
 
+      <AlfaBridgeFlow />
+
       <AlfaModularSystem />
+
+      <ServiceHealthPanel />
 
       <AlfaConnectionStatus />
 
