@@ -1,6 +1,8 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { ExternalLink, Focus, GitBranch, Maximize2, Minus, Pause, Play, Plus, RotateCcw, Search, ShieldCheck } from 'lucide-react';
 import AlfaBrainGraph, { type AlfaBrainGraphHandle } from '@/components/AlfaBrainGraph';
+import AlfaConnectionStatus from '@/components/AlfaConnectionStatus';
+import GoldenOrbPanel from '@/components/GoldenOrbPanel';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -76,6 +78,10 @@ const AlfaBrain: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <AlfaConnectionStatus />
+
+      <GoldenOrbPanel />
 
       <div className="container mx-auto px-4 py-5">
         <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
