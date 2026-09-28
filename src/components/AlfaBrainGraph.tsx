@@ -163,7 +163,7 @@ const AlfaBrainGraph = forwardRef<AlfaBrainGraphHandle, AlfaBrainGraphProps>(({
 
       const simulation = d3.forceSimulation<SimulationNode>(simulationNodes)
         .force('link', d3.forceLink<SimulationNode, SimulationLink>(simulationLinks).id((node) => node.id).distance((link) => {
-          const source = typeof link.source === 'string' ? link.source : link.source.id;
+          const source = typeof link.source === 'object' ? link.source.id : String(link.source);
           return source === 'brain' ? 130 : 105;
         }).strength(0.7))
         .force('charge', d3.forceManyBody().strength(-560))
