@@ -14,3 +14,4 @@
 - [ ] Cerber: 2 niezależne AI do analizy, Cerber decyduje i odpowiada, Guardian może zatrzymać
 - [ ] Niezmienny dziennik decyzji Oracle i zgłoszeń HOLD (czas, źródło, dowody rozstrzygnięcia)
 - [ ] Widok aktywnych blokad HOLD (przyczyna dryfu, wstrzymane akcje, status)
+- [ ] Logowanie i role: pełny wgląd Oracle tylko dla uprawnionych (wymaga Lovable Cloud)
