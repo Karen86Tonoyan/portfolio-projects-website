@@ -4,3 +4,5 @@
 - [x] Połączyć widok z główną nawigacją i panelem sterowania grafem.
 - [x] Rozszerzyć schemat o filtry, czaty, Brain, Mono Agenta, Oracle i n8n.
 - [x] Zweryfikować kompilację oraz widok desktopowy i mobilny.
+- [x] Dodać status filtrów, czatów, agentów i n8n z czytelnymi błędami oraz kontrolowanym ponawianiem prób.
+- [ ] Zweryfikować statusy, komunikaty i limity prób na komputerze oraz telefonie.

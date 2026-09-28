@@ -194,6 +194,8 @@
   .alfa-status-dot.status-observed { fill: hsl(var(--alfa-watch)); }
   .alfa-legend-safe { background: hsl(var(--alfa-safe)); }
   .alfa-legend-watch { background: hsl(var(--alfa-watch)); }
+  .alfa-connection-ok { color: hsl(var(--alfa-safe)); }
+  .alfa-connection-warning { color: hsl(var(--alfa-watch)); }
 }
 
 @layer utilities {
