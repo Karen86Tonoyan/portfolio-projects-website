@@ -30,9 +30,10 @@ const AlfaBridgeFlow = () => {
   const seq = useRef(0);
   const connected = mutualTokensValid(bridgeHoldsCore, CORE, BRIDGE, BRIDGE);
 
-  const alert = (text: string, tone: OwnerAlert['tone'] = 'info') =>
-    publishIncident({ source: 'Brama', type: tone === 'danger' ? (text.startsWith('Token') ? 'TOKEN_THEFT' : 'GATE_REJECT') : 'GATE_ENTRY', message: text, severity: tone === 'danger' ? 'critical' : 'info' }),
+  const alert = (text: string, tone: OwnerAlert['tone'] = 'info') => {
+    publishIncident({ source: 'Brama', type: tone === 'danger' ? (text.startsWith('Token') ? 'TOKEN_THEFT' : 'GATE_REJECT') : 'GATE_ENTRY', message: text, severity: tone === 'danger' ? 'critical' : 'info' });
     setAlerts((prev) => [{ id: ++seq.current, time: new Date().toLocaleTimeString('pl-PL'), text, tone }, ...prev].slice(0, MAX_ALERTS));
+  };
 
   const enter = () => {
     const res = takeToken(bucket.current, Date.now());

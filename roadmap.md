@@ -15,20 +15,21 @@
 - [x] Niezmienny dziennik decyzji Oracle i zgłoszeń HOLD (czas, źródło, dowody rozstrzygnięcia)
 - [x] Widok aktywnych blokad HOLD (przyczyna dryfu, wstrzymane akcje, status)
 - [ ] Logowanie i role: pełny wgląd Oracle tylko dla uprawnionych (wymaga Lovable Cloud)
-- [ ] Wejście przez uśpionego bota w sandboxie -> ALFA Bridge w hostingu, wzajemne tokeny, kradzież tokenu zrywa połączenie, punkt łączenia klientów (pokaz)
-- [ ] Scenariusze: dryf, rozbieżne analizy, awaria jednego modelu - reakcja Cerbera i Guardiana
-- [ ] Powiadomienia: nowy HOLD, zatrzymana akcja, rozstrzygnięcie; odbiorcy wg roli
-- [ ] Widok porównania AI-A vs AI-B dla Cerbera: ustalenia, dowody, pewność, różnice
-- [ ] Łasuch połyka każde wejście i zanosi do sandboxu, właściciel dostaje powiadomienie
-- [ ] Szyfrowane kopie zapasowe dziennika + odtwarzanie z weryfikacją integralności
+- [x] Wejście przez uśpionego bota w sandboxie -> ALFA Bridge w hostingu, wzajemne tokeny, kradzież tokenu zrywa połączenie, punkt łączenia klientów (pokaz)
+- [x] Scenariusze: dryf, rozbieżne analizy, awaria jednego modelu - reakcja Cerbera i Guardiana
+- [x] Powiadomienia: nowy HOLD, zatrzymana akcja, rozstrzygnięcie; odbiorcy wg roli
+- [x] Widok porównania AI-A vs AI-B dla Cerbera: ustalenia, dowody, pewność, różnice
+- [x] Łasuch połyka każde wejście i zanosi do sandboxu, właściciel dostaje powiadomienie
+- [x] Szyfrowane kopie zapasowe dziennika + odtwarzanie z weryfikacją integralności
 - [ ] Testy automatyczne: uprawnienia, izolacja sesji, ochrona publicznej bramy (uprawnienia/sesje czekają na logowanie)
-- [ ] Panel kondycji usług: dostępność, opóźnienia, błędy; dane Oracle ukryte bez uprawnień
-- [ ] Dzielony token: Oracle trzyma połowę tokenu klienta, klient podaje 2 hasła + swoją połowę, Cerber sprawdza parę i mówi PASS/DENY, nikt nie widzi drugiej połowy, Oracle nie ujawnia klienta
-- [ ] Rotacja, wygasanie i natychmiastowe unieważnianie sparowanych tokenów z audytem
-- [ ] Limity i rosnące opóźnienia po nieudanych próbach, konfigurowalne progi, rejestr zdarzeń
-- [ ] Oś czasu incydentu: brama, Cerber, Guardian, HOLD, operatorzy
+- [x] Panel kondycji usług: dostępność, opóźnienia, błędy; dane Oracle ukryte bez uprawnień
+- [x] Dzielony token: Oracle trzyma połowę tokenu klienta, klient podaje 2 hasła + swoją połowę, Cerber sprawdza parę i mówi PASS/DENY, nikt nie widzi drugiej połowy, Oracle nie ujawnia klienta
+- [x] Rotacja, wygasanie i natychmiastowe unieważnianie sparowanych tokenów z audytem
+- [x] Limity i rosnące opóźnienia po nieudanych próbach, konfigurowalne progi, rejestr zdarzeń
+- [x] Oś czasu incydentu: brama, Cerber, Guardian, HOLD, operatorzy
 - [ ] Rotacja kluczy na podstawie mikrofonu, zegarka i kamery (czeka na decyzję: prywatność i zgoda)
-- [ ] Testy E2E: parowanie połówek, 2 hasła, PASS/DENY, tokeny wygasłe i unieważnione
-- [ ] Eksport raportu incydentu PDF i JSON z podpisem kryptograficznym i weryfikacją
-- [ ] Alerty eskalacyjne (odmowy, HOLD, zmiany tokenów) z historią potwierdzeń operatora
+- [x] Testy E2E: parowanie połówek, 2 hasła, PASS/DENY, tokeny wygasłe i unieważnione
+- [x] Eksport raportu incydentu PDF i JSON z podpisem kryptograficznym i weryfikacją
+- [x] Alerty eskalacyjne (odmowy, HOLD, zmiany tokenów) z historią potwierdzeń operatora
 - [ ] Menedżer kluczy: rotacja kluczy kopii i rejestr dostępu (czeka na: Lovable Cloud / wybór menedżera)
+- [ ] Zespół 2: zbieranie alertów i dostarczanie do właściciela/stacji; Zespół 3: skan komputera w sieci (porty, wejścia, co działa, kto) — wymaga lokalnego agenta na sprzęcie właściciela
