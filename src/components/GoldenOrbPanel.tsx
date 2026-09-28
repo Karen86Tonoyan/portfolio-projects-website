@@ -241,6 +241,7 @@ const GoldenOrbPanel = () => {
           </div>
         </div>
       </div>
+      <ScenarioEditorDialog open={editorOpen} initial={editing} onOpenChange={setEditorOpen} onSave={handleSave} />
     </section>
   );
 };
