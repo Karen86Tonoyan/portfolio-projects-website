@@ -47,7 +47,7 @@ export const alfaBrainNodes: AlfaBrainNode[] = [
   { id: 'filters', label: 'ALFA FILTERS', type: 'gate', status: 'active', description: 'Warstwowe filtry wejścia, kontekstu, polityk, pamięci, wykonania, weryfikacji i audytu.', source: 'docs/alfa_execution_security_protocol.md' },
   { id: 'chats', label: 'CHAT CHANNELS', type: 'engine', status: 'observed', description: 'Punkt wejścia rozmów i kanałów komunikacji kierowanych przez bezpieczne bramki ALFA.', source: 'docs/ALFA_AGENT_DASHBOARD.md' },
   { id: 'mono-agent', label: 'MONO AGENT', type: 'engine', status: 'protected', description: 'Pojedynczy agent wykonawczy pracujący w ograniczonym zakresie narzędzi i polityk.', source: 'docs/ALFA_AGENT_RUNTIME.md' },
-  { id: 'oracle', label: 'ORACLE', type: 'engine', status: 'observed', description: 'Warstwa interpretacji wiedzy i rekomendacji, której wynik przechodzi przez Cerbera.', source: 'docs/ALFA_KNOWLEDGE_GRAPH.md' },
+  { id: 'oracle', label: 'ORACLE', type: 'engine', status: 'observed', description: 'Warstwa interpretacji z dostępem do odczytu wszystkich modułów systemu; jej rekomendacje i tak przechodzą przez Cerbera, a sama niczego nie wykonuje.', source: 'docs/ALFA_KNOWLEDGE_GRAPH.md' },
   { id: 'n8n', label: 'N8N WORKFLOWS', type: 'engine', status: 'protected', description: 'Zewnętrzna warstwa automatyzacji workflow podłączana przez kontrolowany interfejs i bramki wykonania.', source: 'integration-schema' },
 ];
 
@@ -82,6 +82,12 @@ export const alfaBrainLinks: AlfaBrainLink[] = [
   { source: 'mono-agent', target: 'runtime', relation: 'executes_in' },
   { source: 'runtime', target: 'n8n', relation: 'dispatches' },
   { source: 'n8n', target: 'verify', relation: 'returns_to' },
+  { source: 'oracle', target: 'guardian', relation: 'reads' },
+  { source: 'oracle', target: 'audit', relation: 'reads' },
+  { source: 'oracle', target: 'snapshots', relation: 'reads' },
+  { source: 'oracle', target: 'risk', relation: 'reads' },
+  { source: 'oracle', target: 'filters', relation: 'reads' },
+  { source: 'oracle', target: 'runtime', relation: 'reads' },
 ];
 
 export const alfaRepositoryUrl = 'https://github.com/Karen86Tonoyan/Anthropic-and-Alfa-Security-Skill-whyd-graff-and-Alfa-brain';

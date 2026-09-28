@@ -8,5 +8,5 @@
 - [x] Zweryfikować statusy, komunikaty i limity prób na komputerze oraz telefonie.
 - [x] Dodać dziennik audytowy przepływu przez filtry, MONO i Oracle oraz wykonanych akcji agentów.
 - [x] Dodać w Golden Orb Panel lokalną symulację z przykładowymi danymi i wynikami każdego węzła, bez zewnętrznych akcji.
-- [ ] System monitoringu bezpieczeństwa: wymienne moduły/algorytmy/silniki + osobne AI do analizy (czeka na doprecyzowanie)
-- [ ] Oracle: zakres dostępu „do wszystkiego” (czeka na doprecyzowanie)
+- [x] System monitoringu bezpieczeństwa: wymienne moduły/algorytmy/silniki + osobne AI do analizy (publiczna prezentacja)
+- [x] Oracle: zakres dostępu „do wszystkiego” (odczyt wszystkich modułów)
