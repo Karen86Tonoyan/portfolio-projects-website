@@ -5,6 +5,7 @@ import AlfaConnectionStatus from '@/components/AlfaConnectionStatus';
 import GoldenOrbPanel from '@/components/GoldenOrbPanel';
 import AlfaModularSystem from '@/components/AlfaModularSystem';
 import AlfaBridgeFlow from '@/components/AlfaBridgeFlow';
+import AlfaTeams from '@/components/AlfaTeams';
 import SplitTokenPanel from '@/components/SplitTokenPanel';
 import IncidentTimeline from '@/components/IncidentTimeline';
 import ServiceHealthPanel from '@/components/ServiceHealthPanel';
@@ -85,6 +86,8 @@ const AlfaBrain: React.FC = () => {
       </div>
 
       <AlfaBridgeFlow />
+
+      <AlfaTeams />
 
       <AlfaModularSystem />
 
