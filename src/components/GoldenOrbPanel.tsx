@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Ban, CheckCircle2, CircleDot, Database, Eye, FileClock, Play, RotateCcw, ShieldAlert } from 'lucide-react';
+import { Ban, CheckCircle2, CircleDot, Database, Eye, FileClock, Pencil, Play, Plus, RotateCcw, ShieldAlert, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
-import { simulationScenarios, type SimulationStep } from '@/data/alfaSimulation';
+import { simulationScenarios, type SimulationScenario, type SimulationStep } from '@/data/alfaSimulation';
+import ScenarioEditorDialog from '@/components/ScenarioEditorDialog';
+import { MAX_CUSTOM_SCENARIOS, createEmptyScenario, isCustomScenario, loadCustomScenarios, saveCustomScenarios } from '@/lib/customScenarios';
 
 interface AuditEntry extends SimulationStep {
   id: string;
@@ -26,13 +28,60 @@ const GoldenOrbPanel = () => {
   const [running, setRunning] = useState(false);
   const [auditEntries, setAuditEntries] = useState<AuditEntry[]>([]);
   const [selectedEntryId, setSelectedEntryId] = useState<string>();
+  const [customScenarios, setCustomScenarios] = useState<SimulationScenario[]>(() => loadCustomScenarios());
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [editing, setEditing] = useState<SimulationScenario | null>(null);
   const timerRef = useRef<number>();
 
+  const allScenarios = useMemo(() => [...simulationScenarios, ...customScenarios], [customScenarios]);
   const scenario = useMemo(
-    () => simulationScenarios.find((item) => item.id === scenarioId) ?? simulationScenarios[0],
-    [scenarioId],
+    () => allScenarios.find((item) => item.id === scenarioId) ?? simulationScenarios[0],
+    [scenarioId, allScenarios],
   );
   const selectedEntry = auditEntries.find((entry) => entry.id === selectedEntryId) ?? auditEntries[0];
+  const isCustom = isCustomScenario(scenario.id);
+
+  const persist = (next: SimulationScenario[]) => {
+    if (!saveCustomScenarios(next)) {
+      toast.error('Nie udało się zapisać w przeglądarce (brak miejsca lub blokada pamięci).');
+      return false;
+    }
+    setCustomScenarios(next);
+    return true;
+  };
+
+  const openNew = () => {
+    if (customScenarios.length >= MAX_CUSTOM_SCENARIOS) {
+      toast.error(`Limit ${MAX_CUSTOM_SCENARIOS} własnych scenariuszy. Usuń któryś, aby dodać nowy.`);
+      return;
+    }
+    setEditing(createEmptyScenario());
+    setEditorOpen(true);
+  };
+
+  const openEdit = () => {
+    setEditing(structuredClone(scenario));
+    setEditorOpen(true);
+  };
+
+  const handleSave = (saved: SimulationScenario) => {
+    const exists = customScenarios.some((item) => item.id === saved.id);
+    const next = exists ? customScenarios.map((item) => (item.id === saved.id ? saved : item)) : [...customScenarios, saved];
+    if (!persist(next)) return;
+    setEditorOpen(false);
+    setScenarioId(saved.id);
+    setActiveIndex(-1);
+    toast.success('Scenariusz zapisany — możesz go uruchomić w dowolnym momencie.');
+  };
+
+  const handleDelete = () => {
+    if (!isCustom || !window.confirm(`Usunąć scenariusz „${scenario.label}”?`)) return;
+    if (!persist(customScenarios.filter((item) => item.id !== scenario.id))) return;
+    setScenarioId(simulationScenarios[0].id);
+    setActiveIndex(-1);
+    toast.success('Scenariusz usunięty.');
+  };
+
 
   useEffect(() => () => {
     if (timerRef.current) window.clearTimeout(timerRef.current);
@@ -95,13 +144,21 @@ const GoldenOrbPanel = () => {
             <div className="flex flex-col gap-3 sm:flex-row">
               <Select value={scenarioId} onValueChange={(value) => { setScenarioId(value); setActiveIndex(-1); }} disabled={running}>
                 <SelectTrigger aria-label="Wybierz scenariusz symulacji" className="flex-1"><SelectValue /></SelectTrigger>
-                <SelectContent>{simulationScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectContent>
+                <SelectContent>
+                  <SelectGroup><SelectLabel>Wbudowane</SelectLabel>{simulationScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectGroup>
+                  {customScenarios.length > 0 && <SelectGroup><SelectLabel>Własne</SelectLabel>{customScenarios.map((item) => <SelectItem key={item.id} value={item.id}>{item.label}</SelectItem>)}</SelectGroup>}
+                </SelectContent>
               </Select>
               <Button onClick={runSimulation} disabled={running}><Play />{running ? 'Symulacja trwa…' : 'Uruchom symulację'}</Button>
             </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Button variant="outline" size="sm" onClick={openNew} disabled={running}><Plus />Nowy scenariusz</Button>
+              <Button variant="outline" size="sm" onClick={openEdit} disabled={running || !isCustom}><Pencil />Edytuj</Button>
+              <Button variant="outline" size="sm" onClick={handleDelete} disabled={running || !isCustom}><Trash2 />Usuń</Button>
+            </div>
 
             <div className="mt-5 border-l-2 border-primary/30 pl-4">
-              <p className="font-mono text-[10px] uppercase text-muted-foreground">Przykładowe żądanie</p>
+              <p className="font-mono text-[10px] uppercase text-muted-foreground">{isCustom ? 'Własne żądanie' : 'Przykładowe żądanie'}</p>
               <p className="mt-2 text-sm leading-relaxed">{scenario.request}</p>
             </div>
 
@@ -184,6 +241,7 @@ const GoldenOrbPanel = () => {
           </div>
         </div>
       </div>
+      <ScenarioEditorDialog open={editorOpen} initial={editing} onOpenChange={setEditorOpen} onSave={handleSave} />
     </section>
   );
 };
