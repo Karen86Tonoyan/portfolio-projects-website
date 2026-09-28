@@ -14,6 +14,7 @@ const links = [
   { to: '/research', label: 'Research' },
   { to: '/biblioteka', label: 'Biblioteka' },
   { to: '/badania', label: 'Badania' },
+  { to: '/modele', label: 'Modele HF' },
   { to: '/manifests', label: 'Manifesty' },
 ];
 

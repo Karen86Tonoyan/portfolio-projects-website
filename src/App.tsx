@@ -16,6 +16,7 @@ import AlfaOffer from "./pages/AlfaOffer";
 import Library from "./pages/Library";
 import NotebookResearch from "./pages/NotebookResearch";
 import AlfaBrain from "./pages/AlfaBrain";
+import HuggingFaceModels from "./pages/HuggingFaceModels";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/biblioteka" element={<Library />} />
             <Route path="/badania" element={<NotebookResearch />} />
             <Route path="/alfa-brain" element={<AlfaBrain />} />
+            <Route path="/modele" element={<HuggingFaceModels />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

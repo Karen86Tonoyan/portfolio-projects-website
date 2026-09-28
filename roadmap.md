@@ -37,3 +37,5 @@
 - [ ] Monitor wycieków co godzinę: tylko wskazane domeny i publiczne źródła zagrożeń, bez danych osobowych (wymaga Lovable Cloud + harmonogram + źródło np. Firecrawl)
 - [ ] Datasety Hugging Face — kolejna strona/sekcja po modelach (żądanie użytkownika, 2026-09-28)
 - [ ] Podłączenie konektorów — użytkownik prosił o „wszystkie”; dopytać, które są potrzebne (n8n? Notion? inne)
+- [ ] Lovable Cloud + produkcyjne logowanie + cogodzinny monitor domen — WSTRZYMANE na prośbę użytkownika (09:53): najpierw lokalny agent Cerber/Guardian do telemetrii wyłącznie autoryzowanych komputerów
+- [ ] Miejsce z naliczaniem opłat (płatności/rozliczenia) — do zbudowania po włączeniu Cloud; wymaga planu Pro
