@@ -27,3 +27,8 @@
 - [ ] Rotacja, wygasanie i natychmiastowe unieważnianie sparowanych tokenów z audytem
 - [ ] Limity i rosnące opóźnienia po nieudanych próbach, konfigurowalne progi, rejestr zdarzeń
 - [ ] Oś czasu incydentu: brama, Cerber, Guardian, HOLD, operatorzy
+- [ ] Rotacja kluczy na podstawie mikrofonu, zegarka i kamery (czeka na decyzję: prywatność i zgoda)
+- [ ] Testy E2E: parowanie połówek, 2 hasła, PASS/DENY, tokeny wygasłe i unieważnione
+- [ ] Eksport raportu incydentu PDF i JSON z podpisem kryptograficznym i weryfikacją
+- [ ] Alerty eskalacyjne (odmowy, HOLD, zmiany tokenów) z historią potwierdzeń operatora
+- [ ] Menedżer kluczy: rotacja kluczy kopii i rejestr dostępu (czeka na: Lovable Cloud / wybór menedżera)
