@@ -10,6 +10,7 @@ import { cerberScenarios } from '@/data/alfaCerberScenarios';
 import AnalysisComparison from '@/components/AnalysisComparison';
 import HoldNotifications, { defaultNotifyConfig, type AlfaNotification, type NotifyConfig, type NotifyEvent } from '@/components/HoldNotifications';
 import LedgerBackup from '@/components/LedgerBackup';
+import { publishIncident, type IncidentSource } from '@/lib/incidentBus';
 
 interface HoldLock {
   id: string;
@@ -46,7 +47,11 @@ const AlfaModularSystem = () => {
   const blocked = anyHold || guardianStop;
   const chainOk = useMemo(() => verifyChain(ledger), [ledger]);
 
-  const log = (entry: Parameters<typeof appendEntry>[1]) => setLedger((prev) => appendEntry(prev, entry));
+  const log = (entry: Parameters<typeof appendEntry>[1]) => {
+    setLedger((prev) => appendEntry(prev, entry));
+    const src: IncidentSource = entry.kind.startsWith('HOLD') ? 'HOLD' : entry.kind.startsWith('GUARDIAN') ? 'Guardian' : 'Cerber';
+    publishIncident({ source: src, type: entry.kind, message: `${entry.source}: ${entry.detail}`, severity: entry.kind === 'HOLD_RAISED' || entry.kind === 'GUARDIAN_STOP' ? 'critical' : 'info' });
+  };
 
   const raiseHold = (cause: string, raisedBy: string) => {
     const id = `HOLD-${(holds.length + 1).toString().padStart(3, '0')}`;

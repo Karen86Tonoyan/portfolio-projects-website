@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
+import { publishIncident } from '@/lib/incidentBus';
 import { takeToken, mutualTokensValid, type Bucket } from '@/lib/gatewayGuard';
 
 /** Presentation of Łasuch capture → sandbox → ALFA Bridge mutual-token model. Nothing connects anywhere. */
@@ -30,6 +31,7 @@ const AlfaBridgeFlow = () => {
   const connected = mutualTokensValid(bridgeHoldsCore, CORE, BRIDGE, BRIDGE);
 
   const alert = (text: string, tone: OwnerAlert['tone'] = 'info') =>
+    publishIncident({ source: 'Brama', type: tone === 'danger' ? (text.startsWith('Token') ? 'TOKEN_THEFT' : 'GATE_REJECT') : 'GATE_ENTRY', message: text, severity: tone === 'danger' ? 'critical' : 'info' }),
     setAlerts((prev) => [{ id: ++seq.current, time: new Date().toLocaleTimeString('pl-PL'), text, tone }, ...prev].slice(0, MAX_ALERTS));
 
   const enter = () => {
