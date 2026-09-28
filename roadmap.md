@@ -11,7 +11,7 @@
 - [x] System monitoringu bezpieczeństwa: wymienne moduły/algorytmy/silniki + osobne AI do analizy (publiczna prezentacja)
 - [x] Oracle: zakres dostępu „do wszystkiego” (odczyt wszystkich modułów)
 - [x] Protokół HOLD: AI pod Oracle blokują decyzję przy dryfie Oracle do rozstrzygnięcia
-- [ ] Cerber: 2 niezależne AI do analizy, Cerber decyduje i odpowiada, Guardian może zatrzymać
-- [ ] Niezmienny dziennik decyzji Oracle i zgłoszeń HOLD (czas, źródło, dowody rozstrzygnięcia)
-- [ ] Widok aktywnych blokad HOLD (przyczyna dryfu, wstrzymane akcje, status)
+- [x] Cerber: 2 niezależne AI do analizy, Cerber decyduje i odpowiada, Guardian może zatrzymać
+- [x] Niezmienny dziennik decyzji Oracle i zgłoszeń HOLD (czas, źródło, dowody rozstrzygnięcia)
+- [x] Widok aktywnych blokad HOLD (przyczyna dryfu, wstrzymane akcje, status)
 - [ ] Logowanie i role: pełny wgląd Oracle tylko dla uprawnionych (wymaga Lovable Cloud)
