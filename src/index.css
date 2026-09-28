@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @layer base {
   :root {
     --background: 220 16% 96%;
@@ -75,6 +73,31 @@
     --input: 220 16% 16%;
     --ring: 200 70% 50%;
   }
+
+  .alfa-brain-theme {
+    --background: 45 20% 4%;
+    --foreground: 43 28% 92%;
+    --card: 40 14% 7%;
+    --card-foreground: 43 28% 92%;
+    --popover: 40 14% 7%;
+    --popover-foreground: 43 28% 92%;
+    --primary: 43 74% 54%;
+    --primary-foreground: 42 25% 7%;
+    --secondary: 40 12% 13%;
+    --secondary-foreground: 43 20% 86%;
+    --muted: 40 10% 12%;
+    --muted-foreground: 42 10% 60%;
+    --accent: 34 67% 42%;
+    --accent-foreground: 43 28% 94%;
+    --border: 42 25% 20%;
+    --input: 42 18% 18%;
+    --ring: 43 74% 54%;
+    --alfa-gold-dim: 42 46% 34%;
+    --alfa-graph-line: 42 38% 29%;
+    --alfa-safe: 149 51% 47%;
+    --alfa-watch: 199 68% 56%;
+    --alfa-shadow: 43 80% 45%;
+  }
 }
 
 @layer base {
@@ -114,6 +137,61 @@
   .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
+
+  .alfa-grid-surface {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.18) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .alfa-graph-link {
+    stroke: hsl(var(--alfa-graph-line));
+    stroke-opacity: 0.72;
+  }
+
+  .alfa-graph-node {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .alfa-node-halo {
+    fill: hsl(var(--background));
+    stroke: hsl(var(--alfa-gold-dim));
+    stroke-width: 1.5;
+  }
+
+  .alfa-node-core {
+    fill: hsl(var(--card));
+    stroke: hsl(var(--primary));
+    stroke-width: 2;
+  }
+
+  .alfa-node-core .alfa-node-core,
+  .alfa-graph-node.is-selected .alfa-node-core,
+  .alfa-graph-node:focus .alfa-node-core {
+    fill: hsl(var(--primary));
+    stroke: hsl(var(--foreground));
+    filter: drop-shadow(0 0 10px hsl(var(--alfa-shadow) / 0.62));
+  }
+
+  .alfa-node-guardian .alfa-node-core { stroke-width: 3; }
+  .alfa-node-memory .alfa-node-core { stroke-dasharray: 3 2; }
+  .alfa-node-domain .alfa-node-core { fill: hsl(var(--muted)); }
+  .alfa-node-gate .alfa-node-halo { stroke-dasharray: 2 3; }
+
+  .alfa-node-label {
+    fill: hsl(var(--foreground));
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    pointer-events: none;
+  }
+
+  .alfa-status-dot { stroke: hsl(var(--background)); stroke-width: 1.5; }
+  .alfa-status-dot.status-active { fill: hsl(var(--alfa-safe)); }
+  .alfa-status-dot.status-protected { fill: hsl(var(--primary)); }
+  .alfa-status-dot.status-observed { fill: hsl(var(--alfa-watch)); }
 }
 
 @layer utilities {
