@@ -39,3 +39,6 @@
 - [ ] Podłączenie konektorów — użytkownik prosił o „wszystkie”; dopytać, które są potrzebne (n8n? Notion? inne)
 - [ ] Lovable Cloud + produkcyjne logowanie + cogodzinny monitor domen — WSTRZYMANE na prośbę użytkownika (09:53): najpierw lokalny agent Cerber/Guardian do telemetrii wyłącznie autoryzowanych komputerów
 - [ ] Miejsce z naliczaniem opłat (płatności/rozliczenia) — do zbudowania po włączeniu Cloud; wymaga planu Pro
+- [x] Strona Modele HF (publiczny katalog Hugging Face: szukaj, filtr, sort, linki) — zweryfikowana w przeglądarce, 12 testów OK
+- [ ] Podłączyć konektory wskazane przez użytkownika: GitHub API, LinkedIn, Firecrawl, Lovable API, Discord, Google Search Console, Google Sheets (2026-09-30)
+- [ ] Odwołania do projektów użytkownika (ALFA Secure Scan, Alpha Genesis Platform, Trend Scout AI, AI Skill Forge, AI Companion, Program Showcase, Kindred Code, AI Guard) — zapytać, do czego mają służyć
