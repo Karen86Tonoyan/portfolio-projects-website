@@ -6,3 +6,4 @@
 - Scope Gold-Black design tokens to the ALFA Brain page, because the existing portfolio pages retain their current theme.- Route all ALFA Brain panel events through `src/lib/incidentBus.ts`, because the incident timeline, escalations and signed reports must see one shared, ordered stream.
 - Keep security primitives (split token, ledger, backup crypto, gateway guard, report signing) as pure libs under `src/lib` with vitest coverage, because UI panels are demos while the logic must stay verifiable.
 - Hugging Face browser fetches only the public huggingface.co API client-side with validated params (whitelisted sorts/tasks, sanitized search, no keys), because it is a read-only catalog and must never imply model execution.
+- Local file scanner runs only on user-picked folders via the File System Access API with hard entry/depth caps, because scanned data must never leave the browser or imply access to files the user did not grant.
