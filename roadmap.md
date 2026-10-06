@@ -45,3 +45,4 @@
 - [ ] Lokalny skaner plików/folderów/modeli/zdjęć w grafie wiedzy ALFA Brain (File System Access API, lokalnie, bez uploadu) — 2026-10-06
 - [ ] Dokończyć konektory: LinkedIn, Discord, Lovable API (przerwane przez nową wiadomość)
 - [ ] Lista modeli HF, które użytkownik chce — dopytać o konkretne nazwy
+- [ ] Prosta aplikacja: zbiór komend PowerShell (kategorie, wyszukiwarka, kopiowanie) — 2026-10-06
