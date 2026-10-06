@@ -9,6 +9,7 @@ import AlfaTeams from '@/components/AlfaTeams';
 import SplitTokenPanel from '@/components/SplitTokenPanel';
 import IncidentTimeline from '@/components/IncidentTimeline';
 import ServiceHealthPanel from '@/components/ServiceHealthPanel';
+import LocalFileScanner from '@/components/LocalFileScanner';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -100,6 +101,8 @@ const AlfaBrain: React.FC = () => {
       <AlfaConnectionStatus />
 
       <GoldenOrbPanel />
+
+      <LocalFileScanner />
 
       <div className="container mx-auto px-4 py-5">
         <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">

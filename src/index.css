@@ -217,3 +217,15 @@
     animation: fade-in-up 0.6s ease-out forwards;
   }
 }
+
+/* Local file scanner graph (ALFA Brain page) */
+.alfa-scan-node .alfa-node-core { stroke-width: 1.5; }
+.alfa-scan-root .alfa-node-core { fill: hsl(var(--primary) / 0.35); stroke: hsl(var(--primary)); }
+.alfa-scan-dir .alfa-node-core { fill: hsl(var(--primary) / 0.18); stroke: hsl(var(--primary) / 0.8); }
+.alfa-scan-image .alfa-node-core { fill: hsl(var(--alfa-safe) / 0.3); stroke: hsl(var(--alfa-safe)); }
+.alfa-scan-model .alfa-node-core { fill: hsl(var(--primary) / 0.45); stroke: hsl(var(--primary)); }
+.alfa-scan-document .alfa-node-core { fill: hsl(var(--alfa-watch) / 0.3); stroke: hsl(var(--alfa-watch)); }
+.alfa-scan-code .alfa-node-core { fill: hsl(var(--accent) / 0.35); stroke: hsl(var(--accent)); }
+.alfa-scan-audio .alfa-node-core, .alfa-scan-video .alfa-node-core { fill: hsl(var(--muted-foreground) / 0.3); stroke: hsl(var(--muted-foreground)); }
+.alfa-scan-archive .alfa-node-core, .alfa-scan-other .alfa-node-core { fill: hsl(var(--muted) / 0.5); stroke: hsl(var(--muted-foreground) / 0.6); }
+.alfa-scan-node.is-selected .alfa-node-core { stroke: hsl(var(--primary)); stroke-width: 2.5; }

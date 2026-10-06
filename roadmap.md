@@ -42,3 +42,7 @@
 - [x] Strona Modele HF (publiczny katalog Hugging Face: szukaj, filtr, sort, linki) — zweryfikowana w przeglądarce, 12 testów OK
 - [ ] Podłączyć konektory wskazane przez użytkownika: GitHub API, LinkedIn, Firecrawl, Lovable API, Discord, Google Search Console, Google Sheets (2026-09-30)
 - [ ] Odwołania do projektów użytkownika (ALFA Secure Scan, Alpha Genesis Platform, Trend Scout AI, AI Skill Forge, AI Companion, Program Showcase, Kindred Code, AI Guard) — zapytać, do czego mają służyć
+- [ ] Lokalny skaner plików/folderów/modeli/zdjęć w grafie wiedzy ALFA Brain (File System Access API, lokalnie, bez uploadu) — 2026-10-06
+- [ ] Dokończyć konektory: LinkedIn, Discord, Lovable API (przerwane przez nową wiadomość)
+- [ ] Lista modeli HF, które użytkownik chce — dopytać o konkretne nazwy
+- [ ] Prosta aplikacja: zbiór komend PowerShell (kategorie, wyszukiwarka, kopiowanie) — 2026-10-06
