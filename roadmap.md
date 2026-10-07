@@ -47,3 +47,7 @@
 - [ ] Lista modeli HF, które użytkownik chce — dopytać o konkretne nazwy
 - [ ] Prosta aplikacja: zbiór komend PowerShell (kategorie, wyszukiwarka, kopiowanie) — 2026-10-06
 - [ ] Link zaproszenia https://lovable.dev/invite/K3YWP30 + sekcja dla „wolnych / chcących być wolnymi” pod nazwiskiem Karen Tonoyan — 2026-10-07
+- [x] Skaner lokalny plików w grafie ALFA Brain — gotowy, 7 testów OK, zweryfikowany w przeglądarce
+- [x] Aplikacja komend PowerShell (/powershell) — gotowa, zweryfikowana
+- [x] Link zaproszenia + sekcja „Dla wolnych” na Home — gotowe, zweryfikowane
+- [ ] LinkedIn: konektor działa w tle, bez eksponowania go publicznie na stronie (żądanie 2026-10-07)
