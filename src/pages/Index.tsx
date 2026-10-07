@@ -128,6 +128,25 @@ const Index: React.FC = () => {
           </Button>
         </a>
       </div>
+
+      {/* Invite — wolni i chcący być wolnymi */}
+      <div className="max-w-2xl mx-auto mt-16 text-center animate-fade-in-up" style={{ animationDelay: '700ms' }}>
+        <div className="rounded-lg border border-primary/30 bg-card p-8">
+          <h2 className="text-2xl font-bold text-foreground mb-3">Dla wolnych — i tych, którzy chcą być wolni</h2>
+          <p className="text-muted-foreground mb-2">
+            Szukam ludzi, którzy są wolni albo chcą być wolni — od schematów, od chaosu, od cudzych reguł.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            Jeśli chcesz budować własne rzeczy z AI, dołącz przez moje zaproszenie.
+          </p>
+          <a href="https://lovable.dev/invite/K3YWP30" target="_blank" rel="noopener noreferrer">
+            <Button size="lg">
+              <Zap className="mr-1 h-4 w-4" /> Dołącz przez zaproszenie
+            </Button>
+          </a>
+          <p className="mt-4 text-xs text-muted-foreground">— Karen Tonoyan</p>
+        </div>
+      </div>
     </div>
   );
 };
