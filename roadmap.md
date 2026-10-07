@@ -46,3 +46,4 @@
 - [ ] Dokończyć konektory: LinkedIn, Discord, Lovable API (przerwane przez nową wiadomość)
 - [ ] Lista modeli HF, które użytkownik chce — dopytać o konkretne nazwy
 - [ ] Prosta aplikacja: zbiór komend PowerShell (kategorie, wyszukiwarka, kopiowanie) — 2026-10-06
+- [ ] Link zaproszenia https://lovable.dev/invite/K3YWP30 + sekcja dla „wolnych / chcących być wolnymi” pod nazwiskiem Karen Tonoyan — 2026-10-07
